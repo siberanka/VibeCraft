@@ -47,10 +47,11 @@ class AppServiceProvider extends ServiceProvider
 
         Blade::directive('nonce', fn () => '<?php echo \'nonce="\'.e(app(\App\Core\Security\CspNonce::class)->get()).\'"\'; ?>');
 
-        if (str_starts_with((string) config('app.url'), 'https://') && $this->app->isProduction()) {
-            URL::forceScheme('https');
-        }
+        // Before installation APP_URL is still the example value; the installer follows the request.
         if ($this->app->isProduction() && (string) config('app.url') !== '' && Installation::isInstalled()) {
+            if (str_starts_with((string) config('app.url'), 'https://')) {
+                URL::forceScheme('https');
+            }
             // Links in mails must never take their authority from request headers.
             URL::forceRootUrl((string) config('app.url'));
         }
