@@ -46,7 +46,8 @@ certified by repository tests. Record those checks separately using the final de
 Keep `.env`, APP_KEY, database credentials, SMTP credentials, webhook secrets, TOTP recovery
 codes and bridge keys out of version control. Logs and exports must redact secrets. Use encrypted
 backups outside the public web root and verify restoration regularly. Production APP_DEBUG
-must be false. The document root must point to public, never the repository root.
+must be false. Point the document root to public; the package-root layout is only for Apache with mod_rewrite,
+where the bundled .htaccess routes every request into public and refuses everything else.
 
 ## Scheduled status queries
 

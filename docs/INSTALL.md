@@ -1,5 +1,8 @@
 # Installation and operations
 
+A step-by-step guide for cPanel is in the wiki: [Installation](wiki/Installation.md)
+([Türkçe](wiki/Kurulum.md)).
+
 VibeCraft requires PHP 8.4 or newer, MySQL 8 / MariaDB with InnoDB, and a cron job.
 Enable ctype, curl, dom, fileinfo, filter, GD, hash, intl, mbstring, OpenSSL, PDO MySQL,
 session, sodium, tokenizer and XML. SQLite is intended for isolated development tests.
