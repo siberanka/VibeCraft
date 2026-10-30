@@ -1,0 +1,2 @@
+@if(($site['modules']['store'] ?? false) && auth()->check())<a class="nav-link nav-chest" href="{{ route('chest.index') }}" @if(request()->routeIs('chest.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'chest']) <span>{{ __('Chest') }}</span></a>@endif
+@if($site['modules']['store'] ?? false)<a class="nav-link nav-topup" href="{{ route('account.show') }}#topup">@include('theme::partials.icon', ['icon' => 'gem']) <span>{{ __('Top up :label', ['label' => $site['wallet_label'] ?: __('Balance')]) }}</span></a>@endif

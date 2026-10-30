@@ -1,0 +1,811 @@
+{
+ "format": 1,
+ "packs": [
+  {
+   "id": "ranks",
+   "name": "Rank tags",
+   "categories": [
+    {
+     "id": "ranks",
+     "name": "Ranks",
+     "icons": [
+      {
+       "slug": "vip",
+       "name": "VIP",
+       "path": "library/ranks/vip.svg"
+      },
+      {
+       "slug": "vip-plus",
+       "name": "VIP+",
+       "path": "library/ranks/vip-plus.svg"
+      },
+      {
+       "slug": "mvp",
+       "name": "MVP",
+       "path": "library/ranks/mvp.svg"
+      },
+      {
+       "slug": "mvp-plus",
+       "name": "MVP+",
+       "path": "library/ranks/mvp-plus.svg"
+      },
+      {
+       "slug": "elite",
+       "name": "ELITE",
+       "path": "library/ranks/elite.svg"
+      },
+      {
+       "slug": "legend",
+       "name": "LEGEND",
+       "path": "library/ranks/legend.svg"
+      },
+      {
+       "slug": "sponsor",
+       "name": "SPONSOR",
+       "path": "library/ranks/sponsor.svg"
+      },
+      {
+       "slug": "hero",
+       "name": "HERO",
+       "path": "library/ranks/hero.svg"
+      },
+      {
+       "slug": "king",
+       "name": "KING",
+       "path": "library/ranks/king.svg"
+      }
+     ]
+    },
+    {
+     "id": "blank-tags",
+     "name": "Blank tags",
+     "icons": [
+      {
+       "slug": "tag-iron",
+       "name": "Silver tag",
+       "path": "library/blank-tags/tag-iron.svg"
+      },
+      {
+       "slug": "tag-gold",
+       "name": "Gold tag",
+       "path": "library/blank-tags/tag-gold.svg"
+      },
+      {
+       "slug": "tag-diamond",
+       "name": "Cyan tag",
+       "path": "library/blank-tags/tag-diamond.svg"
+      },
+      {
+       "slug": "tag-obsidian",
+       "name": "Dark tag",
+       "path": "library/blank-tags/tag-obsidian.svg"
+      },
+      {
+       "slug": "tag-emerald",
+       "name": "Green tag",
+       "path": "library/blank-tags/tag-emerald.svg"
+      },
+      {
+       "slug": "tag-ruby",
+       "name": "Red tag",
+       "path": "library/blank-tags/tag-ruby.svg"
+      },
+      {
+       "slug": "tag-amethyst",
+       "name": "Purple tag",
+       "path": "library/blank-tags/tag-amethyst.svg"
+      },
+      {
+       "slug": "tag-lapis",
+       "name": "Blue tag",
+       "path": "library/blank-tags/tag-lapis.svg"
+      },
+      {
+       "slug": "tag-copper",
+       "name": "Copper tag",
+       "path": "library/blank-tags/tag-copper.svg"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "items",
+   "name": "Voxel items",
+   "categories": [
+    {
+     "id": "swords",
+     "name": "Swords",
+     "icons": [
+      {
+       "slug": "wood-sword",
+       "name": "Wooden sword",
+       "path": "library/swords/wood-sword.svg"
+      },
+      {
+       "slug": "stone-sword",
+       "name": "Stone sword",
+       "path": "library/swords/stone-sword.svg"
+      },
+      {
+       "slug": "iron-sword",
+       "name": "Iron sword",
+       "path": "library/swords/iron-sword.svg"
+      },
+      {
+       "slug": "gold-sword",
+       "name": "Golden sword",
+       "path": "library/swords/gold-sword.svg"
+      },
+      {
+       "slug": "diamond-sword",
+       "name": "Diamond sword",
+       "path": "library/swords/diamond-sword.svg"
+      },
+      {
+       "slug": "obsidian-sword",
+       "name": "Obsidian sword",
+       "path": "library/swords/obsidian-sword.svg"
+      }
+     ]
+    },
+    {
+     "id": "pickaxes",
+     "name": "Pickaxes",
+     "icons": [
+      {
+       "slug": "wood-pickaxe",
+       "name": "Wooden pickaxe",
+       "path": "library/pickaxes/wood-pickaxe.svg"
+      },
+      {
+       "slug": "stone-pickaxe",
+       "name": "Stone pickaxe",
+       "path": "library/pickaxes/stone-pickaxe.svg"
+      },
+      {
+       "slug": "iron-pickaxe",
+       "name": "Iron pickaxe",
+       "path": "library/pickaxes/iron-pickaxe.svg"
+      },
+      {
+       "slug": "gold-pickaxe",
+       "name": "Golden pickaxe",
+       "path": "library/pickaxes/gold-pickaxe.svg"
+      },
+      {
+       "slug": "diamond-pickaxe",
+       "name": "Diamond pickaxe",
+       "path": "library/pickaxes/diamond-pickaxe.svg"
+      },
+      {
+       "slug": "obsidian-pickaxe",
+       "name": "Obsidian pickaxe",
+       "path": "library/pickaxes/obsidian-pickaxe.svg"
+      }
+     ]
+    },
+    {
+     "id": "axes",
+     "name": "Axes",
+     "icons": [
+      {
+       "slug": "wood-axe",
+       "name": "Wooden axe",
+       "path": "library/axes/wood-axe.svg"
+      },
+      {
+       "slug": "stone-axe",
+       "name": "Stone axe",
+       "path": "library/axes/stone-axe.svg"
+      },
+      {
+       "slug": "iron-axe",
+       "name": "Iron axe",
+       "path": "library/axes/iron-axe.svg"
+      },
+      {
+       "slug": "gold-axe",
+       "name": "Golden axe",
+       "path": "library/axes/gold-axe.svg"
+      },
+      {
+       "slug": "diamond-axe",
+       "name": "Diamond axe",
+       "path": "library/axes/diamond-axe.svg"
+      },
+      {
+       "slug": "obsidian-axe",
+       "name": "Obsidian axe",
+       "path": "library/axes/obsidian-axe.svg"
+      }
+     ]
+    },
+    {
+     "id": "tools",
+     "name": "Tools",
+     "icons": [
+      {
+       "slug": "wood-shovel",
+       "name": "Wooden shovel",
+       "path": "library/tools/wood-shovel.svg"
+      },
+      {
+       "slug": "wood-hoe",
+       "name": "Wooden hoe",
+       "path": "library/tools/wood-hoe.svg"
+      },
+      {
+       "slug": "stone-shovel",
+       "name": "Stone shovel",
+       "path": "library/tools/stone-shovel.svg"
+      },
+      {
+       "slug": "stone-hoe",
+       "name": "Stone hoe",
+       "path": "library/tools/stone-hoe.svg"
+      },
+      {
+       "slug": "iron-shovel",
+       "name": "Iron shovel",
+       "path": "library/tools/iron-shovel.svg"
+      },
+      {
+       "slug": "iron-hoe",
+       "name": "Iron hoe",
+       "path": "library/tools/iron-hoe.svg"
+      },
+      {
+       "slug": "gold-shovel",
+       "name": "Golden shovel",
+       "path": "library/tools/gold-shovel.svg"
+      },
+      {
+       "slug": "gold-hoe",
+       "name": "Golden hoe",
+       "path": "library/tools/gold-hoe.svg"
+      },
+      {
+       "slug": "diamond-shovel",
+       "name": "Diamond shovel",
+       "path": "library/tools/diamond-shovel.svg"
+      },
+      {
+       "slug": "diamond-hoe",
+       "name": "Diamond hoe",
+       "path": "library/tools/diamond-hoe.svg"
+      },
+      {
+       "slug": "obsidian-shovel",
+       "name": "Obsidian shovel",
+       "path": "library/tools/obsidian-shovel.svg"
+      },
+      {
+       "slug": "obsidian-hoe",
+       "name": "Obsidian hoe",
+       "path": "library/tools/obsidian-hoe.svg"
+      },
+      {
+       "slug": "bow",
+       "name": "Bow",
+       "path": "library/tools/bow.svg"
+      }
+     ]
+    },
+    {
+     "id": "armor",
+     "name": "Armor",
+     "icons": [
+      {
+       "slug": "leather-helmet",
+       "name": "Leather helmet",
+       "path": "library/armor/leather-helmet.svg"
+      },
+      {
+       "slug": "leather-chestplate",
+       "name": "Leather chestplate",
+       "path": "library/armor/leather-chestplate.svg"
+      },
+      {
+       "slug": "leather-leggings",
+       "name": "Leather leggings",
+       "path": "library/armor/leather-leggings.svg"
+      },
+      {
+       "slug": "leather-boots",
+       "name": "Leather boots",
+       "path": "library/armor/leather-boots.svg"
+      },
+      {
+       "slug": "iron-helmet",
+       "name": "Iron helmet",
+       "path": "library/armor/iron-helmet.svg"
+      },
+      {
+       "slug": "iron-chestplate",
+       "name": "Iron chestplate",
+       "path": "library/armor/iron-chestplate.svg"
+      },
+      {
+       "slug": "iron-leggings",
+       "name": "Iron leggings",
+       "path": "library/armor/iron-leggings.svg"
+      },
+      {
+       "slug": "iron-boots",
+       "name": "Iron boots",
+       "path": "library/armor/iron-boots.svg"
+      },
+      {
+       "slug": "gold-helmet",
+       "name": "Golden helmet",
+       "path": "library/armor/gold-helmet.svg"
+      },
+      {
+       "slug": "gold-chestplate",
+       "name": "Golden chestplate",
+       "path": "library/armor/gold-chestplate.svg"
+      },
+      {
+       "slug": "gold-leggings",
+       "name": "Golden leggings",
+       "path": "library/armor/gold-leggings.svg"
+      },
+      {
+       "slug": "gold-boots",
+       "name": "Golden boots",
+       "path": "library/armor/gold-boots.svg"
+      },
+      {
+       "slug": "diamond-helmet",
+       "name": "Diamond helmet",
+       "path": "library/armor/diamond-helmet.svg"
+      },
+      {
+       "slug": "diamond-chestplate",
+       "name": "Diamond chestplate",
+       "path": "library/armor/diamond-chestplate.svg"
+      },
+      {
+       "slug": "diamond-leggings",
+       "name": "Diamond leggings",
+       "path": "library/armor/diamond-leggings.svg"
+      },
+      {
+       "slug": "diamond-boots",
+       "name": "Diamond boots",
+       "path": "library/armor/diamond-boots.svg"
+      },
+      {
+       "slug": "obsidian-helmet",
+       "name": "Obsidian helmet",
+       "path": "library/armor/obsidian-helmet.svg"
+      },
+      {
+       "slug": "obsidian-chestplate",
+       "name": "Obsidian chestplate",
+       "path": "library/armor/obsidian-chestplate.svg"
+      },
+      {
+       "slug": "obsidian-leggings",
+       "name": "Obsidian leggings",
+       "path": "library/armor/obsidian-leggings.svg"
+      },
+      {
+       "slug": "obsidian-boots",
+       "name": "Obsidian boots",
+       "path": "library/armor/obsidian-boots.svg"
+      },
+      {
+       "slug": "copper-helmet",
+       "name": "Copper helmet",
+       "path": "library/armor/copper-helmet.svg"
+      },
+      {
+       "slug": "copper-chestplate",
+       "name": "Copper chestplate",
+       "path": "library/armor/copper-chestplate.svg"
+      },
+      {
+       "slug": "copper-leggings",
+       "name": "Copper leggings",
+       "path": "library/armor/copper-leggings.svg"
+      },
+      {
+       "slug": "copper-boots",
+       "name": "Copper boots",
+       "path": "library/armor/copper-boots.svg"
+      }
+     ]
+    },
+    {
+     "id": "keys",
+     "name": "Keys",
+     "icons": [
+      {
+       "slug": "wood-key",
+       "name": "Common key",
+       "path": "library/keys/wood-key.svg"
+      },
+      {
+       "slug": "diamond-key",
+       "name": "Rare key",
+       "path": "library/keys/diamond-key.svg"
+      },
+      {
+       "slug": "amethyst-key",
+       "name": "Epic key",
+       "path": "library/keys/amethyst-key.svg"
+      },
+      {
+       "slug": "gold-key",
+       "name": "Legendary key",
+       "path": "library/keys/gold-key.svg"
+      },
+      {
+       "slug": "ruby-key",
+       "name": "Mythic key",
+       "path": "library/keys/ruby-key.svg"
+      },
+      {
+       "slug": "emerald-key",
+       "name": "Vote key",
+       "path": "library/keys/emerald-key.svg"
+      }
+     ]
+    },
+    {
+     "id": "crates",
+     "name": "Crates",
+     "icons": [
+      {
+       "slug": "wood-crate",
+       "name": "Common crate",
+       "path": "library/crates/wood-crate.svg"
+      },
+      {
+       "slug": "diamond-crate",
+       "name": "Rare crate",
+       "path": "library/crates/diamond-crate.svg"
+      },
+      {
+       "slug": "amethyst-crate",
+       "name": "Epic crate",
+       "path": "library/crates/amethyst-crate.svg"
+      },
+      {
+       "slug": "gold-crate",
+       "name": "Legendary crate",
+       "path": "library/crates/gold-crate.svg"
+      },
+      {
+       "slug": "ruby-crate",
+       "name": "Mythic crate",
+       "path": "library/crates/ruby-crate.svg"
+      },
+      {
+       "slug": "emerald-crate",
+       "name": "Vote crate",
+       "path": "library/crates/emerald-crate.svg"
+      }
+     ]
+    },
+    {
+     "id": "spawners",
+     "name": "Spawners",
+     "icons": [
+      {
+       "slug": "green-spawner",
+       "name": "Green spawner",
+       "path": "library/spawners/green-spawner.svg"
+      },
+      {
+       "slug": "red-spawner",
+       "name": "Red spawner",
+       "path": "library/spawners/red-spawner.svg"
+      },
+      {
+       "slug": "blue-spawner",
+       "name": "Blue spawner",
+       "path": "library/spawners/blue-spawner.svg"
+      },
+      {
+       "slug": "purple-spawner",
+       "name": "Purple spawner",
+       "path": "library/spawners/purple-spawner.svg"
+      },
+      {
+       "slug": "orange-spawner",
+       "name": "Orange spawner",
+       "path": "library/spawners/orange-spawner.svg"
+      },
+      {
+       "slug": "yellow-spawner",
+       "name": "Yellow spawner",
+       "path": "library/spawners/yellow-spawner.svg"
+      },
+      {
+       "slug": "cyan-spawner",
+       "name": "Cyan spawner",
+       "path": "library/spawners/cyan-spawner.svg"
+      },
+      {
+       "slug": "pink-spawner",
+       "name": "Pink spawner",
+       "path": "library/spawners/pink-spawner.svg"
+      },
+      {
+       "slug": "white-spawner",
+       "name": "White spawner",
+       "path": "library/spawners/white-spawner.svg"
+      },
+      {
+       "slug": "black-spawner",
+       "name": "Black spawner",
+       "path": "library/spawners/black-spawner.svg"
+      }
+     ]
+    },
+    {
+     "id": "eggs",
+     "name": "Spawn eggs",
+     "icons": [
+      {
+       "slug": "green-egg",
+       "name": "Green egg",
+       "path": "library/eggs/green-egg.svg"
+      },
+      {
+       "slug": "red-egg",
+       "name": "Red egg",
+       "path": "library/eggs/red-egg.svg"
+      },
+      {
+       "slug": "blue-egg",
+       "name": "Blue egg",
+       "path": "library/eggs/blue-egg.svg"
+      },
+      {
+       "slug": "purple-egg",
+       "name": "Purple egg",
+       "path": "library/eggs/purple-egg.svg"
+      },
+      {
+       "slug": "orange-egg",
+       "name": "Orange egg",
+       "path": "library/eggs/orange-egg.svg"
+      },
+      {
+       "slug": "yellow-egg",
+       "name": "Yellow egg",
+       "path": "library/eggs/yellow-egg.svg"
+      },
+      {
+       "slug": "cyan-egg",
+       "name": "Cyan egg",
+       "path": "library/eggs/cyan-egg.svg"
+      },
+      {
+       "slug": "pink-egg",
+       "name": "Pink egg",
+       "path": "library/eggs/pink-egg.svg"
+      },
+      {
+       "slug": "white-egg",
+       "name": "White egg",
+       "path": "library/eggs/white-egg.svg"
+      },
+      {
+       "slug": "black-egg",
+       "name": "Black egg",
+       "path": "library/eggs/black-egg.svg"
+      },
+      {
+       "slug": "brown-egg",
+       "name": "Brown egg",
+       "path": "library/eggs/brown-egg.svg"
+      },
+      {
+       "slug": "lime-egg",
+       "name": "Lime egg",
+       "path": "library/eggs/lime-egg.svg"
+      },
+      {
+       "slug": "teal-egg",
+       "name": "Teal egg",
+       "path": "library/eggs/teal-egg.svg"
+      },
+      {
+       "slug": "grey-egg",
+       "name": "Grey egg",
+       "path": "library/eggs/grey-egg.svg"
+      },
+      {
+       "slug": "gold-egg",
+       "name": "Gold egg",
+       "path": "library/eggs/gold-egg.svg"
+      },
+      {
+       "slug": "violet-egg",
+       "name": "Violet egg",
+       "path": "library/eggs/violet-egg.svg"
+      }
+     ]
+    },
+    {
+     "id": "economy",
+     "name": "Economy",
+     "icons": [
+      {
+       "slug": "coin",
+       "name": "Coin",
+       "path": "library/economy/coin.svg"
+      },
+      {
+       "slug": "coin-stack",
+       "name": "Coin stack",
+       "path": "library/economy/coin-stack.svg"
+      },
+      {
+       "slug": "gold-bar",
+       "name": "Gold bar",
+       "path": "library/economy/gold-bar.svg"
+      },
+      {
+       "slug": "banknote",
+       "name": "Banknote",
+       "path": "library/economy/banknote.svg"
+      },
+      {
+       "slug": "money-bag",
+       "name": "Money bag",
+       "path": "library/economy/money-bag.svg"
+      },
+      {
+       "slug": "emerald-gem",
+       "name": "Emerald",
+       "path": "library/economy/emerald-gem.svg"
+      },
+      {
+       "slug": "diamond-gem",
+       "name": "Diamond",
+       "path": "library/economy/diamond-gem.svg"
+      },
+      {
+       "slug": "ruby-gem",
+       "name": "Ruby",
+       "path": "library/economy/ruby-gem.svg"
+      },
+      {
+       "slug": "lapis-gem",
+       "name": "Sapphire",
+       "path": "library/economy/lapis-gem.svg"
+      },
+      {
+       "slug": "amethyst-gem",
+       "name": "Amethyst",
+       "path": "library/economy/amethyst-gem.svg"
+      },
+      {
+       "slug": "gold-gem",
+       "name": "Topaz",
+       "path": "library/economy/gold-gem.svg"
+      }
+     ]
+    },
+    {
+     "id": "potions",
+     "name": "Potions",
+     "icons": [
+      {
+       "slug": "green-potion",
+       "name": "Green potion",
+       "path": "library/potions/green-potion.svg"
+      },
+      {
+       "slug": "red-potion",
+       "name": "Red potion",
+       "path": "library/potions/red-potion.svg"
+      },
+      {
+       "slug": "blue-potion",
+       "name": "Blue potion",
+       "path": "library/potions/blue-potion.svg"
+      },
+      {
+       "slug": "purple-potion",
+       "name": "Purple potion",
+       "path": "library/potions/purple-potion.svg"
+      },
+      {
+       "slug": "orange-potion",
+       "name": "Orange potion",
+       "path": "library/potions/orange-potion.svg"
+      },
+      {
+       "slug": "yellow-potion",
+       "name": "Yellow potion",
+       "path": "library/potions/yellow-potion.svg"
+      },
+      {
+       "slug": "cyan-potion",
+       "name": "Cyan potion",
+       "path": "library/potions/cyan-potion.svg"
+      },
+      {
+       "slug": "pink-potion",
+       "name": "Pink potion",
+       "path": "library/potions/pink-potion.svg"
+      }
+     ]
+    },
+    {
+     "id": "misc",
+     "name": "Misc",
+     "icons": [
+      {
+       "slug": "crown",
+       "name": "Crown",
+       "path": "library/misc/crown.svg"
+      },
+      {
+       "slug": "trophy",
+       "name": "Trophy",
+       "path": "library/misc/trophy.svg"
+      },
+      {
+       "slug": "shield",
+       "name": "Shield",
+       "path": "library/misc/shield.svg"
+      },
+      {
+       "slug": "heart",
+       "name": "Heart",
+       "path": "library/misc/heart.svg"
+      },
+      {
+       "slug": "gift",
+       "name": "Gift",
+       "path": "library/misc/gift.svg"
+      },
+      {
+       "slug": "bell",
+       "name": "Bell",
+       "path": "library/misc/bell.svg"
+      },
+      {
+       "slug": "star",
+       "name": "Star",
+       "path": "library/misc/star.svg"
+      },
+      {
+       "slug": "book",
+       "name": "Book",
+       "path": "library/misc/book.svg"
+      },
+      {
+       "slug": "enchanted-book",
+       "name": "Enchanted book",
+       "path": "library/misc/enchanted-book.svg"
+      },
+      {
+       "slug": "scroll",
+       "name": "Scroll",
+       "path": "library/misc/scroll.svg"
+      },
+      {
+       "slug": "flame",
+       "name": "Flame",
+       "path": "library/misc/flame.svg"
+      },
+      {
+       "slug": "lightning",
+       "name": "Lightning",
+       "path": "library/misc/lightning.svg"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+VibeCraft
+Required Notice: Copyright (c) 2026 siberanka (https://github.com/siberanka/VibeCraft)
+
+VibeCraft, including the website application and the VibeCraft Paper Bridge plugin in bridge/paper/, is
+licensed under the VibeCraft License in LICENSE: the PolyForm Noncommercial License 1.0.0 together with
+additional terms. In short:
+
+- Anyone may build, install, change and run VibeCraft for the Minecraft servers, networks and community
+  websites they run or administer, including ones that earn money through their own store.
+- Nobody may sell VibeCraft, a copy, a changed version, a fork or a renamed copy of it, the website or the
+  plugin separately, or any part of its source code, under the name VibeCraft or under any other name. This
+  includes paid templates, bundles and hosted store services built mainly on VibeCraft.
+- Anyone who copies, quotes or adapts any part of VibeCraft, even a single code block, must credit it:
+  "VibeCraft by siberanka (https://github.com/siberanka/VibeCraft)", with a note when it was changed.
+- Copies and changed versions may be shared free of charge, together with LICENSE and this NOTICE.
+
+This summary does not change the license; the full terms are in LICENSE. Any other use needs a separate
+written license from siberanka: https://github.com/siberanka or https://gitlab.com/siberanka.
+
+Third-party components keep their own licenses:
+
+- Laravel application skeleton portions: Copyright (c) Taylor Otwell, MIT License.
+- Fonts in public/assets/fonts/: SIL Open Font License 1.1, notices in that directory.
+- Composer dependencies (not stored in this repository) and the Paper API, Gson, Adventure, JSpecify and
+  JetBrains annotations used to build the plugin (not bundled) keep their upstream licenses.
+
+See docs/THIRD_PARTY_NOTICES.md, public/assets/LICENSES.md and bridge/paper/NOTICE.md for details.
+
+Names of other projects and products, including Minecraft, Mojang, Microsoft and Paper, belong to their
+owners and only name compatibility targets. VibeCraft is not an official Minecraft product and is not
+approved by or associated with Mojang or Microsoft.

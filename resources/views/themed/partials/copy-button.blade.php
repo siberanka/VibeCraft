@@ -1,0 +1,6 @@
+@if(!empty($address))
+<button type="button" class="server-copy" data-copy="{{ $address }}" data-copied="{{ __('Server address copied.') }}" data-copy-done="{{ __('Copied') }}" data-copy-ready="{{ __('Copy IP') }}" data-copy-fallback="{{ __('Select and copy this address:') }}" aria-label="{{ __('Copy server address') }}: {{ $editionLabel ?? '' }} {{ $address }}" @if(($editionLabel ?? '') === 'Bedrock' && isset($bedrockPort)) aria-description="{{ __('Port') }} {{ $bedrockPort }}" @endif>
+    <span class="copy-address">@if(!empty($editionLabel))<span class="connection-edition">{{ $editionLabel }}@if($editionLabel === 'Bedrock' && isset($bedrockPort)) / {{ __('Port') }} {{ $bedrockPort }}@endif</span>@endif<strong>{{ $address }}</strong></span><span class="copy-action">@include('theme::partials.icon', ['icon' => 'copy', 'iconClass' => 'copy-glyph-ready'])@include('theme::partials.icon', ['icon' => 'check', 'iconClass' => 'copy-glyph-done']) <span class="copy-action-label" data-copy-label>{{ __('Copy IP') }}</span></span>
+</button>
+<noscript><span class="server-address-static"><span class="connection-edition">{{ $editionLabel ?? '' }}@if(($editionLabel ?? '') === 'Bedrock' && isset($bedrockPort)) / {{ __('Port') }} {{ $bedrockPort }}@endif</span><code>{{ $address }}</code></span></noscript>
+@endif

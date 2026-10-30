@@ -1,0 +1,6 @@
+@extends('theme::layouts.app')
+@section('title', __('Audit log'))
+@section('content')
+<div class="wrap page"><header class="page-head"><h1>{{ __('Audit log') }}</h1><p>{{ __('A record of administrative actions and important account changes.') }}</p></header>@include('theme::admin.nav')
+@if(count($records ?? []) === 0)@include('theme::partials.empty', ['emptyTitle' => __('No audit events yet'), 'emptyText' => __('Administrative activity will be recorded here.')])@else<div class="table-wrap" role="region" aria-label="{{ __('Audit events') }}" tabindex="0"><table class="data-table"><thead><tr><th scope="col">{{ __('Date') }}</th><th scope="col">{{ __('Action') }}</th><th scope="col">{{ __('Actor') }}</th><th scope="col">{{ __('Subject') }}</th><th scope="col">{{ __('Reference') }}</th></tr></thead><tbody>@foreach($records as $record)<tr><td>{{ $record->created_at->format('d.m.Y H:i:s') }}</td><td><code>{{ $record->action }}</code></td><td>{{ $record->actor_id ?? '—' }}</td><td>{{ class_basename($record->subject_type ?? '') }} {{ $record->subject_id }}</td><td><code>{{ $record->correlation_id }}</code></td></tr>@endforeach</tbody></table></div>@include('theme::partials.pagination', ['paginator' => $records])@endif</div>
+@endsection

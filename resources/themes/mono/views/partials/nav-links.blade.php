@@ -1,0 +1,6 @@
+@if($site['modules']['store'])<a class="nav-link nav-store" href="{{ route('store.index') }}" @if(request()->routeIs('store.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'store']) <span>{{ __('Store') }}</span></a>@endif
+<a class="nav-link" href="{{ route('servers.index') }}" @if(request()->routeIs('servers.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'server']) <span>{{ __('Servers') }}</span></a>
+@if($site['modules']['news'])<a class="nav-link" href="{{ route('news.index') }}" @if(request()->routeIs('news.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'news']) <span>{{ __('News') }}</span></a>@endif
+@if($site['modules']['tickets'])<a class="nav-link" href="{{ route('tickets.index') }}" @if(request()->routeIs('tickets.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'support']) <span>{{ __('Support') }}</span></a>@endif
+@auth @if($site['modules']['store'])<a class="nav-link" href="{{ route('cart.index') }}" @if(request()->routeIs('cart.*')) aria-current="page" @endif>@include('theme::partials.icon', ['icon' => 'cart']) <span>{{ __('Cart') }}</span></a>@endif @endauth
+@include('theme::partials.nav-topup')

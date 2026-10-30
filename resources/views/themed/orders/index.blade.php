@@ -1,0 +1,6 @@
+@extends('theme::layouts.app')
+@section('title', __('My orders'))
+@section('content')
+<div class="wrap page"><header class="page-head"><h1>{{ __('My orders') }}</h1></header>@include('theme::account.nav')
+@if(count($orders ?? []) === 0)@include('theme::partials.empty', ['emptyTitle' => __('No orders yet'), 'emptyText' => __('Your purchases will appear here.')])<a class="button" href="{{ route('store.index') }}">{{ __('Browse the store') }}</a>@else<div class="table-wrap" role="region" aria-label="{{ __('Order history') }}" tabindex="0"><table class="data-table"><thead><tr><th scope="col">{{ __('Order') }}</th><th scope="col">{{ __('Date') }}</th><th scope="col">{{ __('Payment') }}</th><th scope="col">{{ __('Delivery') }}</th><th scope="col">{{ __('Total') }}</th></tr></thead><tbody>@foreach($orders as $order)<tr><td><a href="{{ route('orders.show', $order) }}"><code>{{ $order->public_id }}</code></a></td><td>{{ $order->created_at->translatedFormat('d M Y H:i') }}</td><td>{{ __($order->status) }}</td><td>{{ __($order->fulfillment_status) }}</td><td>{{ \App\Support\Money::format($order->total_minor, $order->currency) }}</td></tr>@endforeach</tbody></table></div>@include('theme::partials.pagination', ['paginator' => $orders])@endif</div>
+@endsection

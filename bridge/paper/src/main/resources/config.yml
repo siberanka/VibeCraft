@@ -1,0 +1,12 @@
+# Restart Paper after configuring this file. Protect it with owner-only filesystem access.
+enabled: false
+site: ''
+key-id: ''
+secret: ''
+# Exact lowercase console command roots. Namespaced variants require their own entry.
+# Example only: ['lp', 'minecraft:give']. Approve only the roots your products need.
+allowed-command-roots: []
+# Share playtime, player kills, deaths and mob kills of online players for the website leaderboards.
+share-statistics: false
+# Share this server's profile ban list for the website punishments page.
+share-punishments: false

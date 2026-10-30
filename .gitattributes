@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+public/assets/fonts/*-OFL.txt -whitespace
+
+/.github export-ignore
+/.devenv export-ignore
+/.env export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore

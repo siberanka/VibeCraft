@@ -1,0 +1,2 @@
+@php($menuExternal = \App\Support\SiteLink::external($menuItem['url']))
+<a class="{{ $menuClass ?? '' }}" href="{{ $menuItem['url'] }}" @if($menuExternal) rel="noopener noreferrer" @endif @if($menuItem['new_tab']) target="_blank" @endif @if(! $menuExternal && request()->getPathInfo() === (parse_url($menuItem['url'], PHP_URL_PATH) ?: '/')) aria-current="page" @endif>@if($menuIcon ?? false)@include('theme::partials.icon', ['icon' => 'compass']) @endif<span>{{ $menuItem['label'] }}</span></a>

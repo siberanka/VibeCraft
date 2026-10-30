@@ -1,0 +1,44 @@
+{
+  "id": "nomad",
+  "name": "Nomad",
+  "version": "1.0.0",
+  "description": "Adventure & RPG",
+  "author": "siberanka",
+  "tokens": {
+    "c-bg": "#172128",
+    "c-surface": "#233139",
+    "c-ink": "#e5d7bc",
+    "c-muted": "#c0b49e",
+    "c-line": "#657c80",
+    "c-accent": "#d4b273",
+    "c-accent-ink": "#172128",
+    "c-focus": "#eed39e",
+    "c-danger": "#f8b3a0",
+    "c-success": "#afc99d",
+    "r-panel": "2px",
+    "r-control": "2px"
+  },
+  "layout": {
+    "navigation": "chapters",
+    "catalog": "collections",
+    "home": [
+      "strip",
+      "news",
+      "worlds",
+      "purchases",
+      "store"
+    ]
+  },
+  "supports": [
+    "store",
+    "news",
+    "account",
+    "tickets",
+    "admin",
+    "installer"
+  ],
+  "requires": {
+    "vibecraft": "0.1",
+    "php": "8.4"
+  }
+}

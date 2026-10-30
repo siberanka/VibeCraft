@@ -1,0 +1,10 @@
+/* VibeCraft nomad typography. */
+@font-face {
+    font-family:Alegreya;
+    src:url('../fonts/alegreya.ttf') format('truetype');
+    font-weight:400 900;
+    font-display:swap
+}
+:root {
+    --font-display:Alegreya,ui-serif,serif
+}

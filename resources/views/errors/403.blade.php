@@ -1,0 +1,1 @@
+@extends('errors::layout', ['statusCode' => 403, 'heading' => __('This area is restricted'), 'description' => __('Your account cannot open this page. Return to the community or ask the support team for help.')])

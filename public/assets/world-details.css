@@ -1,0 +1,69 @@
+/* VibeCraft original voxel geometry: inventory, waystones and community journals. */
+/* Review: game identity follows useful content, native controls and the five existing worlds. */
+:root {
+    --ve-lit:color-mix(in srgb,var(--c-accent) 68%,var(--c-ink));
+    --ve-face:var(--c-accent);
+    --ve-shade:color-mix(in srgb,var(--c-accent) 48%,var(--c-surface));
+    --ve-band:color-mix(in srgb,var(--c-bg) 78%,var(--c-accent));
+    --ve-paper:color-mix(in srgb,var(--c-ink) 82%,var(--c-surface));
+    --ve-trim:var(--c-accent-ink);
+    --ve-edge:color-mix(in srgb,var(--c-bg) 55%,var(--c-transparent));
+}
+.voxel-emblem {display:block;flex:0 0 auto;overflow:visible}
+.ve-shadow {fill:var(--c-bg);opacity:.3}
+.ve-top {fill:var(--ve-lit)}
+.ve-front {fill:var(--ve-face)}
+.ve-side {fill:var(--ve-shade)}
+.ve-band {fill:var(--ve-band)}
+.ve-paper {fill:var(--ve-paper)}
+.ve-trim {fill:var(--ve-trim)}
+.ve-edge {fill:none;stroke:var(--ve-edge);stroke-width:1.5;stroke-linejoin:miter}
+.product-emblem>.voxel-emblem {width:88px;height:88px}
+.product-showcase>.voxel-emblem {width:144px;height:144px}
+.empty>.voxel-emblem {width:56px;height:56px;margin-bottom:var(--space-md)}
+.news-insignia {display:flex;align-items:center;min-height:48px}
+.news-insignia>.voxel-emblem {width:44px;height:44px}
+.news-item:has(.news-insignia) {border-top:1px solid var(--c-line);padding-top:var(--space-md)}
+.news-list .news-insignia,.directory-list .news-insignia {display:none}
+.ticket-message header {display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}
+.message-author {display:flex;align-items:center;gap:var(--space-sm);min-width:0}
+.message-author>.icon {width:28px;height:28px;flex:0 0 auto;color:var(--c-muted)}
+.message-author>strong {overflow-wrap:anywhere}
+.message-author .small {display:block;color:var(--c-muted);font-weight:400}
+.ticket-message.staff .message-author>.icon {color:var(--c-accent)}
+.ticket-message .message-body {padding-left:calc(28px + var(--space-sm))}
+[data-theme="forge"] .product-emblem>.voxel-emblem {width:96px;height:96px}
+[data-theme="volt"] .news-item:has(.news-insignia) {border-top-width:2px}
+[data-theme="nomad"] .news-insignia>.voxel-emblem {width:48px;height:48px}
+[data-theme="mono"] .voxel-emblem {--ve-lit:var(--c-surface);--ve-face:var(--c-surface);--ve-shade:var(--c-surface);--ve-edge:var(--c-ink)}
+[data-theme="mono"] .ve-top,[data-theme="mono"] .ve-front,[data-theme="mono"] .ve-side {stroke:var(--c-ink);stroke-width:1.25}
+[data-theme="mono"] .ve-shadow {display:none}
+@media(max-width:600px) {
+    .ticket-message header {grid-template-columns:minmax(0,1fr);gap:var(--space-xs)}
+    .ticket-message header time {padding-left:calc(28px + var(--space-sm))}
+    .product-showcase>.voxel-emblem {width:112px;height:112px}
+}
+.error-shell {min-height:100svh;display:grid;grid-template-rows:auto 1fr auto}
+.error-header,.error-footer {display:flex;align-items:center;justify-content:space-between;gap:var(--space-md);padding-block:var(--space-lg)}
+.error-header .wordmark {font-size:1.25rem}
+.error-header>.small {color:var(--c-muted)}
+.error-main {display:grid;grid-template-columns:minmax(0,200px) minmax(0,640px);gap:var(--space-xl);align-items:center;align-content:center;padding-block:var(--space-xl)}
+.error-waystone {display:grid;justify-items:start;gap:var(--space-md)}
+.error-waystone>.voxel-emblem {width:160px;height:160px}
+.error-code {font-size:4rem;line-height:1;font-weight:800;color:var(--c-accent);font-variant-numeric:tabular-nums}
+.error-copy {min-width:0}
+.error-copy h1 {margin-block:0 var(--space-md);overflow-wrap:break-word;min-width:0}
+.error-copy>p {max-width:48ch;color:var(--c-muted)}
+.error-actions {display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-top:var(--space-lg)}
+.error-footer {border-top:1px solid var(--c-line);color:var(--c-muted);font-size:.875rem}
+[data-theme="forge"] .error-main,[data-theme="mono"] .error-main {border-top:2px solid var(--c-line)}
+[data-theme="volt"] .error-code {padding:var(--space-xs) var(--space-sm);background:var(--c-accent);color:var(--c-accent-ink)}
+[data-theme="nomad"] .error-waystone {border-left:2px solid var(--c-line);padding-left:var(--space-lg)}
+[data-theme="mono"] .error-code {color:var(--c-ink)}
+@media(max-width:640px) {
+    .error-header {align-items:flex-start;flex-direction:column;gap:var(--space-xs)}
+    .error-main {grid-template-columns:minmax(0,1fr);gap:var(--space-lg)}
+    .error-waystone {grid-template-columns:auto minmax(0,1fr);align-items:center;gap:var(--space-lg)}
+    .error-waystone>.voxel-emblem {width:80px;height:80px}
+    .error-actions>.button {max-width:100%;white-space:normal;text-align:center}
+}

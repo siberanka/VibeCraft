@@ -1,0 +1,6 @@
+@extends('theme::layouts.app')
+@section('title', __('Support tickets'))
+@section('content')
+<div class="wrap page"><header class="page-head"><div class="flow flow-between"><h1>{{ __('Support tickets') }}</h1><a class="button" href="{{ route('tickets.create') }}">{{ __('New ticket') }}</a></div></header>
+@if(count($tickets ?? []) === 0)@include('theme::partials.empty', ['emptyTitle' => __('No support tickets'), 'emptyText' => __('Open a ticket when you need help with your account, payment or game delivery.')])@else<div class="table-wrap" role="region" aria-label="{{ __('Your support tickets') }}" tabindex="0"><table class="data-table"><thead><tr><th scope="col">{{ __('Subject') }}</th><th scope="col">{{ __('Category') }}</th><th scope="col">{{ __('Status') }}</th><th scope="col">{{ __('Last activity') }}</th></tr></thead><tbody>@foreach($tickets as $ticket)<tr><td><a href="{{ route('tickets.show', $ticket) }}">{{ $ticket->subject }}</a></td><td>{{ __($ticket->category) }}</td><td><span class="order-status">{{ __($ticket->status) }}</span></td><td>{{ $ticket->last_activity_at?->translatedFormat('d M Y H:i') }}</td></tr>@endforeach</tbody></table></div>@include('theme::partials.pagination', ['paginator' => $tickets])@endif</div>
+@endsection

@@ -1,0 +1,44 @@
+{
+  "id": "mono",
+  "name": "Mono",
+  "version": "1.0.0",
+  "description": "Minimal creator",
+  "author": "siberanka",
+  "tokens": {
+    "c-bg": "#fafaf7",
+    "c-surface": "#efefea",
+    "c-ink": "#101214",
+    "c-muted": "#565a58",
+    "c-line": "#7b837a",
+    "c-accent": "#8e4220",
+    "c-accent-ink": "#fafaf7",
+    "c-focus": "#8e4220",
+    "c-danger": "#a12c25",
+    "c-success": "#25613b",
+    "r-panel": "2px",
+    "r-control": "2px"
+  },
+  "layout": {
+    "navigation": "directory",
+    "catalog": "list",
+    "home": [
+      "strip",
+      "news",
+      "worlds",
+      "purchases",
+      "store"
+    ]
+  },
+  "supports": [
+    "store",
+    "news",
+    "account",
+    "tickets",
+    "admin",
+    "installer"
+  ],
+  "requires": {
+    "vibecraft": "0.1",
+    "php": "8.4"
+  }
+}

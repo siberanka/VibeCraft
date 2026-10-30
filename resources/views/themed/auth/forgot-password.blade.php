@@ -1,0 +1,5 @@
+@extends('theme::layouts.app')
+@section('title', __('Reset password'))
+@section('content')
+<div class="wrap page"><div class="auth-shell"><div class="auth-intro">@include('theme::partials.world-scene', ['sceneClass' => 'auth-world', 'sceneSizes' => '(max-width:760px) 96px, 600px'])<h1>{{ __('Find your way back.') }}</h1><p>{{ __('Enter your email address to request a password reset link.') }}</p></div><section class="auth-form"><h2>{{ __('Reset password') }}</h2>@include('theme::partials.errors')<form method="post" action="{{ route('password.email') }}" class="form" data-submit-once>@csrf<div class="field"><label for="email">{{ __('Email address') }}</label><input id="email" name="email" type="email" value="{{ old('email') }}" autocomplete="username" required autofocus maxlength="254"></div>@include('theme::partials.captcha', ['captchaForm' => 'forgot_password'])<button class="button" type="submit">{{ __('Send reset link') }}</button><a class="small" href="{{ route('login') }}">{{ __('Back to login') }}</a></form></section></div></div>
+@endsection

@@ -1,0 +1,15 @@
+name: VibeCraftBridge
+version: 0.1.0-dev
+main: io.github.siberanka.vibecraft.bridge.VibeCraftBridge
+api-version: '26.3'
+author: siberanka
+description: Authenticated delivery and account linking for VibeCraft.
+commands:
+  vclink:
+    description: Link your authenticated player to your website account.
+    usage: /vclink CODE
+    permission: vibecraft.link
+permissions:
+  vibecraft.link:
+    description: Link your own authenticated player account.
+    default: true

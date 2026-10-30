@@ -1,0 +1,1 @@
+@extends('errors::layout', ['statusCode' => 500, 'heading' => __('Something interrupted the journey'), 'description' => __('We could not complete this request. Check your account before repeating a purchase or payment.')])

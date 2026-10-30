@@ -1,0 +1,56 @@
+# --- Local development environment ---
+/.devenv/
+
+# --- Secrets & environment ---
+.env
+.env.*
+!.env.example
+/auth.json
+/storage/*.key
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.sqlite
+*.sqlite-journal
+*.sql
+*.sql.gz
+*.dump
+
+# --- Runtime / generated ---
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/pail
+/storage/app/installed.lock
+/storage/app/install.mutex
+/storage/app/setup-token.sha256
+/storage/app/cloudflare-ips.json
+/build/
+/dist/
+*.log
+*.zip
+*.tar.gz
+.phpunit.result.cache
+/.phpunit.cache
+/coverage/
+
+# --- Bridge plugin build output ---
+/bridge/paper/target/
+/bridge/paper/build/
+/bridge/paper/.gradle/
+
+# --- Editors / OS ---
+/.idea
+/.vscode
+/.nova
+/.zed
+.phpactor.json
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+.DS_Store
+Thumbs.db

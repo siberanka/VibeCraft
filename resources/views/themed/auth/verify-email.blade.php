@@ -1,0 +1,5 @@
+@extends('theme::layouts.app')
+@section('title', __('Verify your email address'))
+@section('content')
+<div class="wrap page"><div class="auth-shell"><div class="auth-intro">@include('theme::partials.world-scene', ['sceneClass' => 'auth-world', 'sceneSizes' => '(max-width:760px) 96px, 600px'])<h1>{{ __('Check your inbox.') }}</h1><p>{{ __('Open the verification link we sent to your email address.') }}</p></div><section class="auth-form"><h2>{{ __('Verify your email address') }}</h2>@include('theme::partials.errors')@if(session('status') === 'verification-link-sent')<p class="alert alert-success" role="status">{{ __('A new verification link has been sent.') }}</p>@endif<form action="{{ route('verification.send') }}" method="post" class="form" data-submit-once>@csrf<p class="muted">{{ __('If the message has not arrived, check your spam folder before requesting another.') }}</p><button class="button" type="submit">{{ __('Resend verification email') }}</button></form></section></div></div>
+@endsection
