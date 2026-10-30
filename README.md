@@ -10,6 +10,34 @@ Turkish and English out of the box.
   modern forwarding and Floodgate supported). It pulls signed deliveries from the website and keeps a
   durable local journal so a command is never run twice.
 
+![Atlas theme home page](docs/screenshots/home-atlas.webp)
+
+<sub>Screenshots use a fictional demo server ("Emberfall") with sample data and the bundled artwork.</sub>
+
+## Screenshots
+
+### Themes
+
+| Forge | Volt |
+|---|---|
+| ![Forge theme](docs/screenshots/home-forge.webp) | ![Volt theme](docs/screenshots/home-volt.webp) |
+| **Nomad** | **Mono** |
+| ![Nomad theme](docs/screenshots/home-nomad.webp) | ![Mono theme](docs/screenshots/home-mono.webp) |
+
+### Store and servers
+
+| Store | Product |
+|---|---|
+| ![Store with rank and key products](docs/screenshots/store.webp) | ![Product page](docs/screenshots/product.webp) |
+| **Servers** | **Credit packages** |
+| ![Server list with live player counts](docs/screenshots/servers.webp) | ![Top-up with bonus credit packages](docs/screenshots/credit-packages.webp) |
+
+### Administration and mobile
+
+| Image picker with the bundled icon library | Mobile |
+|---|---|
+| ![Image picker](docs/screenshots/image-picker.webp) | ![Forge theme on a phone](docs/screenshots/mobile-home.webp) |
+
 ## Features
 
 - Five built-in themes (Atlas, Forge, Volt, Nomad, Mono) with a theme editor, home-section ordering,
