@@ -22,7 +22,7 @@
             </div>
         @empty<p class="muted">{{ __('You have not linked a Minecraft account yet.') }}</p>@endforelse
         <p class="small muted form-footer">{{ __('Generate a temporary code, then use it on one of our connected game servers.') }}</p>
-        @if($linkCode ?? session('link_code'))<div class="alert"><p>{{ __('Your temporary linking code') }}</p><strong class="security-code">{{ $linkCode ?? session('link_code') }}</strong><p class="small muted">{{ __('Enter /vibecraft link followed by this code in game. The code expires after 10 minutes.') }}</p></div>@endif
+        @if($linkCode ?? session('link_code'))<div class="alert"><p>{{ __('Your temporary linking code') }}</p><strong class="security-code">{{ $linkCode ?? session('link_code') }}</strong><p class="small muted">{{ __('Enter /vclink followed by this code in game. The code expires after 10 minutes.') }}</p></div>@endif
         <form method="post" action="{{ route('account.link') }}" class="form-actions" data-submit-once>@csrf<button class="button button-quiet" type="submit">{{ __('Generate linking code') }}</button></form>
     </section>
 </div><aside class="stack">
