@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Core\Install\Installation;
 use Closure;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,10 @@ class ValidateHost
 {
     public function handle(Request $request, Closure $next)
     {
+        if (! Installation::isInstalled()) {
+            // Before installation the owner confirms the site address in the installer.
+            return $next($request);
+        }
         $url = (string) config('app.url');
         $expected = parse_url($url, PHP_URL_HOST);
         abort_unless(is_string($expected) && strcasecmp($request->getHost(), $expected) === 0, 400, 'Unrecognized host.');

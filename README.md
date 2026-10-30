@@ -60,6 +60,18 @@ Turkish and English out of the box.
 - HTTPS for production
 - For the plugin: JDK 25 and Paper 26.3
 
+## Install on shared hosting (cPanel)
+
+1. Download `vibecraft-<version>.zip` from the latest release and verify it with `SHA256SUMS`.
+2. Select PHP 8.4+ for the domain, create an empty MySQL/MariaDB database and user.
+3. Upload and extract the zip, point the domain to its `public/` folder (or put the contents in
+   `public_html`; the bundled `.htaccess` keeps everything except `public/` unreachable).
+4. Open your site: the browser installer asks for the setup token from
+   `storage/app/setup-token.txt`, the database details and the owner account. No terminal needed.
+5. Add the cron line shown by the installer.
+
+Step-by-step guide with the cPanel menu names: [docs/INSTALL.md](docs/INSTALL.md).
+
 ## Quick start (local development)
 
 ```sh
@@ -80,7 +92,8 @@ For production hosting follow [docs/INSTALL.md](docs/INSTALL.md) and the
 
 ## Building the Paper plugin
 
-The plugin builds without Gradle, Maven or downloads. Put the six pinned API jars listed in
+Each release also ships a ready `VibeCraftBridge-<version>.jar`: drop it into the server's `plugins/` folder and
+follow [bridge/paper/README.md](bridge/paper/README.md). To build it yourself without Gradle, Maven or downloads, put the six pinned API jars listed in
 `bridge/paper/dependencies.sha256` in a directory, then:
 
 ```sh

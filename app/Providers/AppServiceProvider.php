@@ -50,7 +50,7 @@ class AppServiceProvider extends ServiceProvider
         if (str_starts_with((string) config('app.url'), 'https://') && $this->app->isProduction()) {
             URL::forceScheme('https');
         }
-        if ($this->app->isProduction() && (string) config('app.url') !== '') {
+        if ($this->app->isProduction() && (string) config('app.url') !== '' && Installation::isInstalled()) {
             // Links in mails must never take their authority from request headers.
             URL::forceRootUrl((string) config('app.url'));
         }

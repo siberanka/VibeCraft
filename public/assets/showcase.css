@@ -1464,3 +1464,29 @@ a.strip-cell:focus-visible,
 .product-grid .product-image.media-icon {
     aspect-ratio:16/10
 }
+
+/* ---------- Installer steps ---------- */
+.install-steps {
+    display:flex;
+    flex-wrap:wrap;
+    gap:var(--space-xs);
+    margin:0 0 var(--space-lg);
+    padding:0;
+    list-style:none;
+    counter-reset:install-step
+}
+.install-steps li {
+    counter-increment:install-step;
+    padding:var(--space-xs) var(--space-sm);
+    border:1px solid var(--c-line);
+    border-radius:var(--r-control);
+    color:var(--c-muted)
+}
+.install-steps li::before {
+    content:counter(install-step) ". "
+}
+.install-steps li[aria-current="step"] {
+    border-color:var(--c-accent);
+    color:var(--c-ink);
+    font-weight:700
+}

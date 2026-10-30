@@ -57,7 +57,7 @@ public final class PaperLifecycleTests {
         return result;
     }
     private static JavaPlugin load(ServerMock server,YamlConfiguration configuration) {
-        JavaPlugin plugin=(JavaPlugin)MockBukkit.loadJar("target/VibeCraftBridge-0.1.0-dev.jar");
+        JavaPlugin plugin=(JavaPlugin)MockBukkit.loadJar("target/VibeCraftBridge-0.9.0-beta.jar");
         // MockBukkit's loadJar registers commands but omits the manifest permissions.
         // Register their actual defaults just as Paper's normal loader does.
         plugin.getPluginMeta().getPermissions().forEach(permission -> server.getPluginManager().addPermission(permission));

@@ -8,7 +8,7 @@ scratch=${2:?Provide a fresh isolated fixture directory}
 case "$deps" in /*) ;; *) echo 'An absolute runtime dependency directory is required.' >&2; exit 2 ;; esac
 case "$scratch" in /scratch/qa/*) ;; *) echo 'Use the isolated /scratch/qa mount.' >&2; exit 2 ;; esac
 case "$scratch" in *'/../'*|*'/..'|*'/./'*|*'/.'|*'//'*|*'\'*) echo 'A canonical fixture path is required.' >&2; exit 2 ;; esac
-test -f target/VibeCraftBridge-0.1.0-dev.jar || { echo 'Run the offline production build first.' >&2; exit 2; }
+test -f target/VibeCraftBridge-0.9.0-beta.jar || { echo 'Run the offline production build first.' >&2; exit 2; }
 test ! -e "$scratch" && test ! -e target/integration-classes || { echo 'Use fresh fixture and integration output directories.' >&2; exit 2; }
 (cd "$deps"; sha256sum -c "$base/integration-dependencies.sha256")
 classpath=target/classes

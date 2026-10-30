@@ -22,6 +22,6 @@ javac -J-Xmx128m -J-XX:+UseSerialGC -J-XX:ActiveProcessorCount=1 --release 25 -p
 java -Djava.io.tmpdir="${TMPDIR:-/tmp}" -Xmx128m -XX:+UseSerialGC -XX:ActiveProcessorCount=1 -cp "target/classes:target/test-classes:$classpath" \
   io.github.siberanka.vibecraft.bridge.CoreTests
 cp src/main/resources/plugin.yml src/main/resources/config.yml LICENSE NOTICE.md target/classes/
-jar --create --file target/VibeCraftBridge-0.1.0-dev.jar --date=2026-10-27T00:00:00Z -C target/classes .
-sha256sum target/VibeCraftBridge-0.1.0-dev.jar
+jar --create --file target/VibeCraftBridge-0.9.0-beta.jar --date=2026-10-27T00:00:00Z -C target/classes .
+sha256sum target/VibeCraftBridge-0.9.0-beta.jar
 printf 'PAPER_BRIDGE_BUILD_PASS\n'

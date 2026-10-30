@@ -33,6 +33,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/install', [InstallController::class, 'index'])->name('install.index');
 Route::post('/install', [InstallController::class, 'store'])->middleware('throttle:install')->name('install.store');
+Route::post('/install/token', [InstallController::class, 'token'])->middleware('throttle:install')->name('install.token');
+Route::post('/install/database', [InstallController::class, 'database'])->middleware('throttle:install')->name('install.database');
 Route::get('/', [PortalController::class, 'home'])->name('home');
 Route::post('/locale', [PortalController::class, 'locale'])->name('locale');
 Route::get('/legal', [LegalController::class, 'index'])->name('legal.index');

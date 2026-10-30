@@ -1,3 +1,20 @@
+# Never serve archives, backups, dumps, logs, environment, VCS or hidden files, even if one is
+# copied into this folder by mistake (for example an old release zip or a database export).
+<FilesMatch "(^\.|~$|\.(zip|tar|gz|tgz|bz2|xz|7z|rar|sql|sqlite|sqlite3|db|dump|bak|backup|old|orig|save|swp|log|env|ini|sh|phar|lock|json|yml|yaml|md|txt)$)">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^(robots\.txt|favicon\.ico)$">
+    Require all granted
+</FilesMatch>
+
+# Only the front controller may run as PHP.
+<FilesMatch "\.(php|phtml|phar|php[0-9])$">
+    Require all denied
+</FilesMatch>
+<Files "index.php">
+    Require all granted
+</Files>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

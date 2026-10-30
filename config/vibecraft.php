@@ -2,13 +2,18 @@
 
 return [
 
-    'version' => '0.1.0-dev',
+    'version' => '0.9.0-beta',
 
     /*
     | Marker written by the installer. Until it exists every web request is
     | routed to the installer; afterwards the installer routes return 404.
     */
     'install_lock' => storage_path('app/installed.lock'),
+
+    // The browser installer writes the database settings into .env (disabled in the test suite).
+    'required_extensions' => ['ctype', 'curl', 'dom', 'fileinfo', 'gd', 'intl', 'mbstring', 'openssl', 'pdo_mysql', 'tokenizer', 'xml'],
+
+    'installer_writes_env' => (bool) env('VIBECRAFT_INSTALLER_WRITES_ENV', true),
 
     /*
     | Trusted reverse proxy handling.

@@ -13,6 +13,9 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 // Register the Composer autoloader...
 require __DIR__.'/../vendor/autoload.php';
 
+// A fresh upload has no .env yet: create one with a random key so the web installer can start.
+App\Core\Install\EnvironmentFile::prepare(dirname(__DIR__));
+
 // Bootstrap Laravel and handle the request...
 /** @var Application $app */
 $app = require_once __DIR__.'/../bootstrap/app.php';

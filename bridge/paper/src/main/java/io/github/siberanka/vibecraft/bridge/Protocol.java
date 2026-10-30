@@ -26,7 +26,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 /** Exact UTF-8 wire contract. A complete batch is validated before any execution. */
 public final class Protocol {
-    public static final String VERSION = "0.1.0-dev";
+    public static final String VERSION = "0.9.0-beta";
     public static final int MAX_BODY = 262144;
     private Protocol() {}
 

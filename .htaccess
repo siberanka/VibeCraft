@@ -1,0 +1,23 @@
+# Fallback for hosts whose document root cannot point to public/: upload the whole package into
+# public_html and every request is routed into public/. Nothing outside public/ is ever served.
+Options -Indexes -MultiViews
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+# Without mod_rewrite the application files would be exposed, so refuse everything instead.
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
+
+# Never serve archives, backups, dumps, logs, environment, VCS or hidden files, even if one is
+# copied into this folder by mistake (for example an old release zip or a database export).
+<FilesMatch "(^\.|~$|\.(zip|tar|gz|tgz|bz2|xz|7z|rar|sql|sqlite|sqlite3|db|dump|bak|backup|old|orig|save|swp|log|env|ini|sh|phar|lock|json|yml|yaml|md|txt)$)">
+    Require all denied
+</FilesMatch>
+<FilesMatch "^(robots\.txt|favicon\.ico)$">
+    Require all granted
+</FilesMatch>

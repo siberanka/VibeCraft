@@ -28,7 +28,7 @@ regressions and creates a jar containing only this plugin's classes and resource
 sh build.sh /absolute/path/to/provided-api-jars
 ```
 
-Output: `target/VibeCraftBridge-0.1.0-dev.jar`. Use a clean checkout for a release
+Output: `target/VibeCraftBridge-0.9.0-beta.jar`. Use a clean checkout for a release
 build. Stable archive timestamps require the same JDK/compiler for byte-for-byte
 reproducibility. No Gradle/Maven wrapper, CI workflow or downloaded build script
 runs automatically.
