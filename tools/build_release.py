@@ -59,6 +59,7 @@ def main():
     parser.add_argument('--composer', required=True)
     parser.add_argument('--jar')
     args = parser.parse_args()
+    args.php, args.composer = str(Path(args.php).resolve()), str(Path(args.composer).resolve())
 
     if run(['git', 'status', '--porcelain', '--untracked-files=no'], ROOT).strip():
         sys.exit('Commit or discard tracked changes first; releases are built from HEAD only.')
