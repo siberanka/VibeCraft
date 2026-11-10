@@ -1,1 +1,41 @@
 /* VibeCraft mono typography uses the shared Manrope family. */
+/* ---------- Details: plus, equals and cross marks for the three home sections; a still ring for live servers; the copied address is underlined; the hidden celebration turns the page into its negative. ---------- */
+:root[data-theme="mono"] :is(#worlds-heading,#news-heading,#store-heading)::before {
+    content:"";
+    display:inline-block;
+    width:.42em;
+    height:.42em;
+    margin-right:.5em;
+    vertical-align:.1em;
+}
+:root[data-theme="mono"] #worlds-heading::before {
+    background:linear-gradient(var(--c-ink),var(--c-ink)) 50% 0/2px 100% no-repeat,linear-gradient(var(--c-ink),var(--c-ink)) 0 50%/100% 2px no-repeat;
+}
+:root[data-theme="mono"] #news-heading::before {
+    background:linear-gradient(var(--c-ink),var(--c-ink)) 0 22%/100% 2px no-repeat,linear-gradient(var(--c-ink),var(--c-ink)) 0 78%/100% 2px no-repeat;
+}
+:root[data-theme="mono"] #store-heading::before {
+    background:linear-gradient(var(--c-ink),var(--c-ink)) 50% 0/2px 100% no-repeat,linear-gradient(var(--c-ink),var(--c-ink)) 0 50%/100% 2px no-repeat;
+    transform:rotate(45deg);
+}
+:root[data-theme="mono"] .status-online::before {
+    background:var(--c-transparent);
+    border:1px solid currentColor;
+    border-radius:50%;
+    animation:none;
+}
+:root[data-theme="mono"] .server-copy[data-state="copied"] .copy-address strong {
+    text-decoration:underline;
+    text-decoration-thickness:2px;
+    text-underline-offset:.2em;
+}
+:root[data-theme="mono"] .scroll-meter {
+    height:2px;
+    background:var(--c-ink);
+}
+:root[data-theme="mono"] .theme-egg {
+    display:none;
+}
+:root[data-theme="mono"][data-egg] {
+    filter:invert(1) hue-rotate(180deg);
+}

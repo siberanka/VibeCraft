@@ -25,6 +25,24 @@ Her temanın kendi yerleşimi, yazı tipleri ve özgün görselleri vardır; se�
 deneyin. Mono ve Brick açık renkli, diğerleri koyu temalardır. Prism'in cam efekti arka plan bulanıklığı
 kullanır; eski tarayıcılarda paneller düz renkli görünür. Bütün temaların ekran görüntüleri [README](../../README.md#screenshots) dosyasında.
 
+## Küçük ayrıntılar
+
+Her temanın kendine özgü birkaç ayrıntısı vardır; her biri tek bir yere ve tek bir işe bağlıdır:
+
+| Nerede | Ne yapar |
+|---|---|
+| Ana sayfa bölüm başlıkları | Sunucular, haberler ve mağaza başlıklarının her biri temanın tarzında çizilmiş kendi küçük işaretini alır |
+| Çevrimiçi sunucular | Oyuncu sayısının yanında "canlı" işareti: işaret feneri, kor, kalp, yıldız imi vb. |
+| IP kopyalama düğmesi | Adres kopyalanınca temaya özgü kısa bir tepki |
+| Fiyatlar, tarihler, hata sayfaları | Temanın dünyasından bir nesne gibi biçimlenir (para, fiyat etiketi, köşeli ayraçlı tarih, etiket rakamlar) |
+| Sayfanın üstü | Kaydırma animasyonlarını destekleyen tarayıcılarda ince bir okuma ilerleme çizgisi |
+
+Bir de gizli kutlama vardır: herhangi bir sayfada ↑ ↑ ↓ ↓ ← → ← → B A tuşlarına basın ya da ana sayfada site
+adına hızlıca beş kez basın. Her tema birkaç saniyeliğine farklı karşılık verir (paralar, kayan yıldızlar,
+rakam yağmuru, yuvarlanan bloklar…). Süslemelerin tamamı ekran okuyuculardan gizlidir ve cihazında "hareketi
+azalt" seçeneğini açan ziyaretçiler için kapalıdır. Kutlamayı kapatmak için **Özel CSS** bölümüne
+`.theme-egg { display: none; }` ekleyin.
+
 ## Tema renkleri
 
 **Yönetim → Temalar → Tema renkleri**, etkin temanın renk değerlerini (arka planlar, metin, vurgu,

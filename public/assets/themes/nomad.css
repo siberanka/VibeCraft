@@ -8,3 +8,62 @@
 :root {
     --font-display:Alegreya,ui-serif,serif
 }
+/* ---------- Details: a drop cap opens every article; thin travel marks for the three home sections; a slow compass point for live servers; a seal lands when the address is copied; drifting sand for the hidden celebration. ---------- */
+:root[data-theme="nomad"] .prose>p:first-of-type::first-letter {
+    float:left;
+    padding-right:.08em;
+    font-family:var(--font-display);
+    font-size:3.2em;
+    line-height:.86;
+    color:var(--c-accent);
+}
+:root[data-theme="nomad"] :is(#worlds-heading,#news-heading,#store-heading)::after {
+    content:"";
+    display:inline-block;
+    width:.52em;
+    height:.44em;
+    margin-left:.5em;
+    opacity:.85;
+}
+:root[data-theme="nomad"] #worlds-heading::after {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 100%/12% 42% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 44% 100%/12% 70% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 88% 100%/12% 100% no-repeat;
+}
+:root[data-theme="nomad"] #news-heading::after {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 8%/100% 9% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 50%/68% 9% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 92%/86% 9% no-repeat;
+}
+:root[data-theme="nomad"] #store-heading::after {
+    width:.4em;
+    height:.4em;
+    border:1px solid var(--c-accent);
+    transform:rotate(45deg);
+}
+:root[data-theme="nomad"] .status-online::before {
+    background:var(--c-transparent);
+    border:1px solid currentColor;
+    transform:rotate(45deg);
+    animation:nomad-turn 6s linear infinite;
+}
+@keyframes nomad-turn {
+    to {
+        transform:rotate(405deg);
+    }
+}
+:root[data-theme="nomad"] .server-copy[data-state="copied"] .copy-action {
+    animation:nomad-seal .45s var(--ease-out);
+}
+@keyframes nomad-seal {
+    from {
+        transform:scale(1.5) rotate(-10deg);
+        opacity:0;
+    }
+}
+:root[data-theme="nomad"] .theme-egg>i {
+    --egg-size:4px;
+    --egg-time:3.6s;
+    animation-name:nomad-drift;
+}
+@keyframes nomad-drift {
+    to {
+        transform:translate(-38vw,128vh);
+    }
+}

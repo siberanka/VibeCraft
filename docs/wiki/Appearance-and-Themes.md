@@ -28,6 +28,24 @@ browsers replace with solid panels.
 
 Screenshots of every theme are in the [README](../../README.md#screenshots).
 
+## Small details
+
+Every theme carries a few details of its own, each tied to one place and one job:
+
+| Where | What it does |
+|---|---|
+| Home section headings | Servers, news and store each get their own small mark, drawn in the theme's style |
+| Online servers | A "live" sign next to the player count: a beacon, an ember, a heart, an asterisk and so on |
+| Copy IP button | A short theme-specific response when the address is copied |
+| Prices, dates, error pages | Shaped like something from the theme's world (a coin, a price tag, bracketed dates, sticker numerals) |
+| Top of the page | A thin reading-progress line in browsers that support scroll-driven animations |
+
+There is also a hidden celebration: press ↑ ↑ ↓ ↓ ← → ← → B A on any page, or press the site name five times
+quickly on the home page. Each theme answers differently (coins, shooting stars, digit rain, tumbling
+blocks…) for a few seconds. Everything decorative is hidden from screen readers and switched off for visitors
+who ask their device for reduced motion. To turn the celebration off, add `.theme-egg { display: none; }` to
+**Custom CSS**.
+
 ## Theme colours
 
 **Admin → Themes → Theme colours** lets you change the colour tokens of the active theme

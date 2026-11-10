@@ -13,6 +13,11 @@
 - Yeni tema görselleri koddan üretilen özgün piksel sanat ve düz renkli çizimlerdir
   (`tools/themes/build_artwork.py`); üçüncü taraf görsel içermez. Yeni yazı tipleri
   (Pixelify Sans, VT323, Archivo Black, Righteous) SIL OFL 1.1 ile yerel sunulur.
+- On temanın hepsine temaya özgü küçük ayrıntılar eklendi: her ana sayfa bölüm başlığının
+  kendi işareti, çevrimiçi sunucularda "canlı" işareti, IP kopyalanınca kısa tepki, fiyat,
+  tarih ve hata sayfası işlemeleri, üstte okuma ilerleme çizgisi ve gizli bir kutlama
+  (↑ ↑ ↓ ↓ ← → ← → B A ya da ana sayfada site adına beş kez basmak). Süslemeler ekran
+  okuyuculardan gizlidir ve "hareketi azalt" tercihinde kapalıdır.
 - Tema tanımı artık açık/koyu renk düzenini ve stil dosyasının yüklenme sırasını
   bildirebilir; açık temalarda tarayıcı denetimleri de açık görünür.
 

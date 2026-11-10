@@ -530,3 +530,135 @@
         transform:none;
     }
 }
+/* ---------- Details: each mark belongs to one place. Block pictograms for the three home sections; a bouncing dot for live servers; the copied address tilts like a stamp; a punched price tag; a starburst sticker on the stage; tumbling blocks for the hidden celebration. ---------- */
+:root[data-theme="brick"] :is(#worlds-heading,#news-heading,#store-heading)::before {
+    content:"";
+    display:inline-block;
+    width:.56em;
+    height:.56em;
+    margin-right:.45em;
+    vertical-align:.02em;
+}
+:root[data-theme="brick"] #worlds-heading::before {
+    background:linear-gradient(var(--brick-green),var(--brick-green)) 0 100%/26% 42% no-repeat,linear-gradient(var(--brick-green),var(--brick-green)) 37% 100%/26% 70% no-repeat,linear-gradient(var(--brick-green),var(--brick-green)) 74% 100%/26% 100% no-repeat;
+}
+:root[data-theme="brick"] #news-heading::before {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 6%/100% 20% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 50%/68% 20% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 94%/86% 20% no-repeat;
+}
+:root[data-theme="brick"] #store-heading::before {
+    border:3px solid var(--c-ink);
+    border-radius:50%;
+    background:var(--brick-yellow);
+}
+:root[data-theme="brick"] .status-online::before {
+    width:.62em;
+    height:.62em;
+    border:2px solid var(--c-ink);
+    border-radius:50%;
+    background:var(--brick-green);
+    animation:brick-bounce 1.2s var(--ease-out) infinite alternate;
+}
+@keyframes brick-bounce {
+    to {
+        transform:translateY(-3px);
+    }
+}
+:root[data-theme="brick"] .server-copy[data-state="copied"] {
+    animation:brick-stamp .4s var(--ease-out);
+}
+@keyframes brick-stamp {
+    30% {
+        transform:rotate(-2.5deg) scale(1.04);
+    }
+}
+:root[data-theme="brick"] .server-copy[data-state="copied"] .copy-action {
+    background:var(--brick-green);
+}
+/* One response per role: tiles slide, the emblem tips, news tilts, the price tag swings; server cards stay put. */
+:root[data-theme="brick"] a.strip-cell .voxel-emblem {
+    transition:transform var(--ui-duration) var(--ease-out);
+}
+:root[data-theme="brick"] a.strip-cell:hover .voxel-emblem {
+    transform:rotate(-9deg) scale(1.1);
+}
+:root[data-theme="brick"] .news-tile:hover {
+    transform:rotate(-.7deg);
+    box-shadow:var(--brick-drop);
+}
+:root[data-theme="brick"] .product-grid>.product-item:hover {
+    transform:none;
+    box-shadow:var(--brick-drop);
+}
+:root[data-theme="brick"] .product-grid .product-price {
+    padding-left:1.1em;
+    background:radial-gradient(circle at .55em 50%,var(--c-surface) 0 .16em,var(--c-ink) .17em .26em,var(--c-transparent) .27em),var(--brick-yellow);
+    transform-origin:.55em 50%;
+    transition:transform var(--ui-duration) var(--ease-out);
+}
+:root[data-theme="brick"] .product-grid>.product-item:hover .product-price {
+    transform:rotate(-5deg);
+}
+:root[data-theme="brick"] .news-tile-meta time {
+    padding:0 var(--space-xs);
+    border:2px solid var(--c-ink);
+    border-radius:var(--r-control);
+    background:var(--brick-white);
+    font-weight:700;
+    transform:rotate(-1.5deg);
+}
+:root[data-theme="brick"] .error-code {
+    justify-self:start;
+    padding:0 var(--space-md);
+    border:4px solid var(--c-ink);
+    border-radius:var(--r-panel);
+    background:var(--brick-yellow);
+    box-shadow:var(--brick-drop);
+    font-family:var(--font-display);
+    font-weight:400;
+    color:var(--c-ink);
+    transform:rotate(-3deg);
+}
+:root[data-theme="brick"] .stage-brick::after {
+    content:"";
+    position:absolute;
+    top:var(--space-lg);
+    right:-14px;
+    z-index:var(--z-base);
+    width:92px;
+    height:92px;
+    background:var(--brick-pink);
+    clip-path:polygon(50% 0,59% 16%,75% 7%,77% 25%,93% 25%,84% 41%,100% 50%,84% 59%,93% 75%,77% 75%,75% 93%,59% 84%,50% 100%,41% 84%,25% 93%,23% 75%,7% 75%,16% 59%,0 50%,16% 41%,7% 25%,23% 25%,25% 7%,41% 16%);
+    animation:brick-turn 28s linear infinite;
+}
+@keyframes brick-turn {
+    to {
+        transform:rotate(360deg);
+    }
+}
+:root[data-theme="brick"] .scroll-meter {
+    height:6px;
+    background:var(--brick-orange);
+    box-shadow:0 2px 0 var(--c-ink);
+}
+:root[data-theme="brick"] .theme-egg>i {
+    --egg-size:26px;
+    --egg-spin:260deg;
+    --egg-time:2.4s;
+    --egg-ease:cubic-bezier(.5,0,.9,.4);
+    --egg-color:var(--brick-yellow);
+    border:3px solid var(--c-ink);
+}
+:root[data-theme="brick"] .theme-egg>i:nth-child(4n+2) {
+    --egg-color:var(--brick-pink);
+}
+:root[data-theme="brick"] .theme-egg>i:nth-child(4n+3) {
+    --egg-color:var(--brick-green);
+}
+:root[data-theme="brick"] .theme-egg>i:nth-child(4n) {
+    --egg-color:var(--brick-orange);
+}
+@media (max-width:1000px) {
+    :root[data-theme="brick"] .stage-brick::after {
+        content:none;
+    }
+}

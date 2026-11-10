@@ -164,3 +164,38 @@ if (document.documentElement.dataset.theme === 'prism' && matchMedia('(pointer: 
         });
     }, { passive: true });
 }
+
+// Hidden celebration. Each theme styles it; nothing here creates content or reads input values.
+const celebrationKeys = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+let celebrationStep = 0;
+let celebrationTimer = 0;
+function celebrate() {
+    const root = document.documentElement;
+    clearTimeout(celebrationTimer);
+    root.dataset.egg = 'on';
+    celebrationTimer = setTimeout(() => { delete root.dataset.egg; }, 6000);
+}
+document.addEventListener('keydown', event => {
+    if (event.target instanceof Element && event.target.closest('input, textarea, select, [contenteditable]')) return;
+    const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+    celebrationStep = key === celebrationKeys[celebrationStep] ? celebrationStep + 1 : (key === celebrationKeys[0] ? 1 : 0);
+    if (celebrationStep === celebrationKeys.length) {
+        celebrationStep = 0;
+        celebrate();
+    }
+});
+const siteMark = document.querySelector('.home-page .site-header .wordmark');
+let markPresses = [];
+siteMark?.addEventListener('click', event => {
+    // On the home page the mark returns to the top instead of reloading the same page.
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+    event.preventDefault();
+    window.scrollTo({ top: 0 });
+    const now = Date.now();
+    markPresses = markPresses.filter(time => now - time < 2500);
+    markPresses.push(now);
+    if (markPresses.length >= 5) {
+        markPresses = [];
+        celebrate();
+    }
+});

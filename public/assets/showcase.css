@@ -1490,3 +1490,104 @@ a.strip-cell:focus-visible,
     color:var(--c-ink);
     font-weight:700
 }
+
+/* ---------- Small details shared by every theme: live dot, scroll meter, scrollbar, hidden celebration ---------- */
+html {
+    scrollbar-color:color-mix(in srgb,var(--c-accent) 55%,var(--c-line)) var(--c-bg);
+}
+::selection {
+    background:var(--c-accent);
+    color:var(--c-accent-ink);
+}
+.status-online::before {
+    content:"";
+    display:inline-block;
+    width:.5em;
+    height:.5em;
+    margin-right:.5em;
+    background:currentColor;
+    vertical-align:.08em;
+    animation:live-dot 2.4s ease-in-out infinite;
+}
+@keyframes live-dot {
+    50% {
+        opacity:.35;
+        transform:scale(.7);
+    }
+}
+/* Reading progress: a scroll-driven line, so it needs no script and disappears where unsupported. */
+.scroll-meter {
+    display:none;
+    position:fixed;
+    inset:0 0 auto 0;
+    z-index:var(--z-message);
+    height:3px;
+    background:var(--c-accent);
+    transform:scaleX(0);
+    transform-origin:0 50%;
+    pointer-events:none;
+}
+@supports (animation-timeline:scroll()) {
+    @media (prefers-reduced-motion:no-preference) {
+        .scroll-meter {
+            display:block;
+            animation:scroll-meter linear both;
+            animation-timeline:scroll(root block);
+        }
+    }
+}
+@keyframes scroll-meter {
+    to {
+        transform:scaleX(1);
+    }
+}
+/* Hidden celebration layer: fourteen inert pieces that each theme dresses and moves in its own way. */
+.theme-egg {
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:var(--z-message);
+    overflow:clip;
+    pointer-events:none;
+}
+@media (prefers-reduced-motion:no-preference) {
+    [data-egg] .theme-egg {
+        display:block;
+    }
+}
+.theme-egg>i {
+    position:absolute;
+    top:-12vh;
+    left:var(--egg-x);
+    width:var(--egg-size,12px);
+    height:var(--egg-size,12px);
+    background:var(--egg-color,var(--c-accent));
+    animation:egg-fall var(--egg-time,2.8s) var(--egg-ease,linear) var(--egg-delay,0s) 2 both;
+}
+.theme-egg>i:nth-child(1) {--egg-x:4%;--egg-delay:.1s}
+.theme-egg>i:nth-child(2) {--egg-x:11%;--egg-delay:.9s}
+.theme-egg>i:nth-child(3) {--egg-x:18%;--egg-delay:.35s}
+.theme-egg>i:nth-child(4) {--egg-x:25%;--egg-delay:1.3s}
+.theme-egg>i:nth-child(5) {--egg-x:32%;--egg-delay:.6s}
+.theme-egg>i:nth-child(6) {--egg-x:39%;--egg-delay:0s}
+.theme-egg>i:nth-child(7) {--egg-x:46%;--egg-delay:1.1s}
+.theme-egg>i:nth-child(8) {--egg-x:53%;--egg-delay:.45s}
+.theme-egg>i:nth-child(9) {--egg-x:60%;--egg-delay:1.5s}
+.theme-egg>i:nth-child(10) {--egg-x:67%;--egg-delay:.2s}
+.theme-egg>i:nth-child(11) {--egg-x:74%;--egg-delay:.8s}
+.theme-egg>i:nth-child(12) {--egg-x:81%;--egg-delay:1.2s}
+.theme-egg>i:nth-child(13) {--egg-x:88%;--egg-delay:.5s}
+.theme-egg>i:nth-child(14) {--egg-x:95%;--egg-delay:1s}
+@keyframes egg-fall {
+    to {
+        transform:translateY(128vh) rotate(var(--egg-spin,0deg));
+    }
+}
+@keyframes egg-rise {
+    from {
+        transform:translateY(128vh);
+    }
+    to {
+        transform:translateY(0) rotate(var(--egg-spin,0deg));
+    }
+}

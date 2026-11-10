@@ -346,3 +346,119 @@
         filter:none;
     }
 }
+/* ---------- Details: each mark belongs to one place. Line-art pictograms for the three home sections; a neon point for live servers; a cyan pulse when the address is copied; stars over the header; the title's sunset slowly drifts; shooting stars for the hidden celebration. ---------- */
+:root[data-theme="dusk"] :is(#worlds-heading,#news-heading,#store-heading)::after {
+    content:"";
+    display:inline-block;
+    width:.56em;
+    height:.46em;
+    margin-left:.5em;
+    filter:drop-shadow(0 0 6px var(--dusk-cyan));
+}
+:root[data-theme="dusk"] #worlds-heading::after {
+    background:linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 0 100%/14% 42% no-repeat,linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 43% 100%/14% 70% no-repeat,linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 86% 100%/14% 100% no-repeat;
+}
+:root[data-theme="dusk"] #news-heading::after {
+    background:linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 0 8%/100% 10% no-repeat,linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 0 50%/68% 10% no-repeat,linear-gradient(var(--dusk-cyan),var(--dusk-cyan)) 0 92%/86% 10% no-repeat;
+}
+:root[data-theme="dusk"] #store-heading::after {
+    width:.44em;
+    height:.44em;
+    border:2px solid var(--dusk-cyan);
+    border-radius:50%;
+}
+:root[data-theme="dusk"] .status-online::before {
+    border-radius:50%;
+    box-shadow:0 0 6px currentColor,0 0 14px currentColor;
+    animation-duration:3.4s;
+}
+:root[data-theme="dusk"] .server-copy[data-state="copied"]::after {
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:inherit;
+    box-shadow:0 0 0 2px var(--dusk-cyan),0 0 26px var(--dusk-cyan);
+    opacity:0;
+    pointer-events:none;
+    animation:dusk-pulse .8s var(--ease-out);
+}
+@keyframes dusk-pulse {
+    30% {
+        opacity:1;
+    }
+}
+/* One response per role: status cells keep a single neon line, news lifts, products glow. */
+:root[data-theme="dusk"] .strip-cell {
+    border-color:var(--c-line);
+    background:var(--c-surface);
+    box-shadow:inset 0 -2px 0 var(--c-accent);
+}
+:root[data-theme="dusk"] a.strip-cell:hover {
+    transform:none;
+    border-color:var(--c-line);
+    box-shadow:inset 0 -4px 0 var(--dusk-cyan);
+}
+:root[data-theme="dusk"] .product-grid>.product-item:hover {
+    transform:none;
+}
+:root[data-theme="dusk"] .news-tile-meta time {
+    color:var(--dusk-cyan);
+}
+:root[data-theme="dusk"] .product-grid .product-price {
+    text-shadow:0 0 18px color-mix(in srgb,var(--dusk-sun) 55%,var(--c-transparent));
+}
+:root[data-theme="dusk"] .error-code {
+    font-family:var(--font-display);
+    font-size:5rem;
+    font-weight:400;
+    color:var(--dusk-sun);
+    text-shadow:0 3px 0 var(--c-shade),0 0 30px color-mix(in srgb,var(--c-accent) 70%,var(--c-transparent));
+}
+:root[data-theme="dusk"] .site-header::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:
+        radial-gradient(1.5px 1.5px at 8% 28%,var(--dusk-gold),var(--c-transparent)),
+        radial-gradient(1.5px 1.5px at 23% 68%,var(--c-ink),var(--c-transparent)),
+        radial-gradient(1.5px 1.5px at 41% 22%,var(--c-ink),var(--c-transparent)),
+        radial-gradient(2px 2px at 57% 60%,var(--dusk-gold),var(--c-transparent)),
+        radial-gradient(1.5px 1.5px at 72% 30%,var(--c-ink),var(--c-transparent)),
+        radial-gradient(1.5px 1.5px at 91% 64%,var(--c-ink),var(--c-transparent));
+    animation:dusk-twinkle 3.6s ease-in-out infinite alternate;
+}
+@keyframes dusk-twinkle {
+    to {
+        opacity:.3;
+    }
+}
+:root[data-theme="dusk"] .stage-dusk .stage-title {
+    background-size:100% 170%;
+    animation:dusk-drift 7s ease-in-out infinite alternate;
+}
+@keyframes dusk-drift {
+    to {
+        background-position:0 100%;
+    }
+}
+:root[data-theme="dusk"] .scroll-meter {
+    background:linear-gradient(90deg,var(--dusk-sun),var(--c-accent));
+}
+:root[data-theme="dusk"] .theme-egg>i {
+    width:120px;
+    height:2px;
+    background:linear-gradient(90deg,var(--dusk-gold),var(--c-transparent));
+    --egg-time:1.5s;
+    --egg-ease:ease-in;
+    animation-name:dusk-star;
+}
+@keyframes dusk-star {
+    from {
+        transform:rotate(-58deg);
+    }
+    to {
+        transform:translate(-46vw,118vh) rotate(-58deg);
+    }
+}

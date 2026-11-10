@@ -113,6 +113,8 @@
     </div>
 </footer>
 @include('theme::partials.confirmation')
+<div class="scroll-meter" aria-hidden="true"></div>
+<div class="theme-egg" aria-hidden="true">@for($eggPiece = 0; $eggPiece < 14; $eggPiece++)<i></i>@endfor</div>
 @stack('scripts')
 </body>
 </html>

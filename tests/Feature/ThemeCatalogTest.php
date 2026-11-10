@@ -78,6 +78,27 @@ class ThemeCatalogTest extends TestCase
         $this->assertSame(1, substr_count($html, 'assets/themes/atlas.css'));
     }
 
+    public function test_pages_carry_one_inert_celebration_layer_and_every_theme_dresses_it(): void
+    {
+        $html = (string) $this->get('/')->assertOk()->getContent();
+        // The layer and the scroll meter are decoration: hidden from assistive technology and free of inline styles.
+        $this->assertSame(1, substr_count($html, '<div class="theme-egg" aria-hidden="true">'));
+        $this->assertSame(14, substr_count($html, '<i></i>'));
+        $this->assertSame(1, substr_count($html, '<div class="scroll-meter" aria-hidden="true"></div>'));
+        $this->assertStringNotContainsString(' style="', $html);
+
+        foreach (config('vibecraft.themes') as $theme) {
+            $css = (string) file_get_contents(public_path("assets/themes/$theme.css"));
+            $this->assertMatchesRegularExpression('/\\.theme-egg|\\[data-egg\\]/', $css, "$theme has no celebration");
+            // Each home section gets its own mark instead of one ornament repeated on every heading.
+            foreach (['#worlds-heading', '#news-heading', '#store-heading'] as $heading) {
+                $this->assertStringContainsString($heading, $css, "$theme $heading");
+            }
+        }
+        $shared = (string) file_get_contents(public_path('assets/showcase.css'));
+        $this->assertStringContainsString('@media (prefers-reduced-motion:no-preference) {'."\n".'    [data-egg] .theme-egg', $shared);
+    }
+
     public function test_theme_stylesheets_reference_only_bundled_files(): void
     {
         foreach (config('vibecraft.themes') as $theme) {

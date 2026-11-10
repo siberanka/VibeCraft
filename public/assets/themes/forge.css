@@ -389,3 +389,58 @@
         font-size:1.65rem;
     }
 }
+/* ---------- Details: forged marks for the three home sections; a flickering ember for live servers; the address glows hot when copied; sparks for the hidden celebration. ---------- */
+:root {
+    --forge-spark:#ffd27a;
+}
+:root[data-theme="forge"] :is(#worlds-heading,#news-heading,#store-heading)::before {
+    content:"";
+    display:inline-block;
+    width:.56em;
+    height:.56em;
+    margin-right:.5em;
+    vertical-align:.04em;
+}
+:root[data-theme="forge"] #worlds-heading::before {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 100%/24% 42% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 38% 100%/24% 70% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 76% 100%/24% 100% no-repeat;
+}
+:root[data-theme="forge"] #news-heading::before {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 8%/100% 18% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 50%/68% 18% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 92%/86% 18% no-repeat;
+}
+:root[data-theme="forge"] #store-heading::before {
+    border-radius:50%;
+    background:radial-gradient(circle,var(--forge-spark) 0 34%,var(--c-accent) 36%);
+}
+:root[data-theme="forge"] .status-online::before {
+    transform:rotate(45deg);
+    animation:forge-ember 1.7s steps(4,end) infinite;
+}
+@keyframes forge-ember {
+    25% {
+        opacity:.55;
+    }
+    50% {
+        opacity:1;
+    }
+    75% {
+        opacity:.7;
+    }
+}
+:root[data-theme="forge"] .server-copy[data-state="copied"] {
+    animation:forge-heat .7s var(--ease-out);
+}
+@keyframes forge-heat {
+    30% {
+        filter:brightness(1.45) saturate(1.3);
+    }
+}
+:root[data-theme="forge"] .theme-egg>i {
+    --egg-size:6px;
+    --egg-time:3.4s;
+    --egg-spin:140deg;
+    box-shadow:0 0 12px var(--c-accent);
+    animation-name:egg-rise;
+}
+:root[data-theme="forge"] .theme-egg>i:nth-child(3n) {
+    --egg-color:var(--forge-spark);
+}

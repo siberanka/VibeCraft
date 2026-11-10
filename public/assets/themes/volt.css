@@ -365,3 +365,50 @@
         margin-top:var(--space-lg);
     }
 }
+/* ---------- Details: slanted marks for the three home sections; a blinking bar for live servers; a short jolt when the address is copied; bolts for the hidden celebration. ---------- */
+:root[data-theme="volt"] :is(#worlds-heading,#news-heading,#store-heading)::after {
+    content:"";
+    display:inline-block;
+    width:.56em;
+    height:.5em;
+    margin-left:.45em;
+    transform:skewX(-14deg);
+}
+:root[data-theme="volt"] #worlds-heading::after {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 100%/24% 42% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 38% 100%/24% 70% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 76% 100%/24% 100% no-repeat;
+}
+:root[data-theme="volt"] #news-heading::after {
+    background:linear-gradient(var(--c-accent),var(--c-accent)) 0 8%/100% 18% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 50%/68% 18% no-repeat,linear-gradient(var(--c-accent),var(--c-accent)) 0 92%/86% 18% no-repeat;
+}
+:root[data-theme="volt"] #store-heading::after {
+    background:repeating-linear-gradient(-45deg,var(--c-accent) 0 3px,var(--c-transparent) 3px 6px);
+}
+:root[data-theme="volt"] .status-online::before {
+    width:.2em;
+    height:.8em;
+    vertical-align:-.1em;
+    animation:volt-blink .9s steps(2,jump-none) infinite;
+}
+@keyframes volt-blink {
+    to {
+        opacity:.2;
+    }
+}
+:root[data-theme="volt"] .server-copy[data-state="copied"] {
+    animation:volt-jolt .28s steps(4,end);
+}
+@keyframes volt-jolt {
+    25% {
+        transform:translateX(-3px);
+    }
+    75% {
+        transform:translateX(3px);
+    }
+}
+:root[data-theme="volt"] .theme-egg>i {
+    width:4px;
+    height:32vh;
+    --egg-time:.75s;
+    --egg-ease:cubic-bezier(.7,0,1,1);
+    transform:skewX(-14deg);
+}
