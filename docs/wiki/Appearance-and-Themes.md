@@ -7,7 +7,7 @@ audit log.
 
 ## Themes
 
-**Admin → Themes** shows five built-in themes. Switching themes keeps all content, accounts and orders.
+**Admin → Themes** shows ten built-in themes. Switching themes keeps all content, accounts and orders.
 
 | Theme | Made for |
 |---|---|
@@ -16,8 +16,15 @@ audit log.
 | **Volt** | Competitive and arena servers |
 | **Nomad** | Adventure and RPG servers |
 | **Mono** | Minimal sites and creators |
+| **Prism** | A modern liquid-glass look: translucent panels over an aurora night, with a light that follows the pointer |
+| **Arcade** | Retro pixel servers: pixel lettering, bevelled menu windows and buttons that press down |
+| **Terminal** | A green phosphor console: monospace type, prompt-style headings and scanlines |
+| **Brick** | A bright, friendly light theme: heavy outlines, hard shadows and flat colour blocks |
+| **Dusk** | An eighties neon sunset: banded sky, glowing outlines and a grid to the horizon |
 
 Each theme has its own layout, typefaces and original artwork; try them on your content before choosing.
+Mono and Brick are light themes; the others are dark. Prism's glass uses background blur, which older
+browsers replace with solid panels.
 
 Screenshots of every theme are in the [README](../../README.md#screenshots).
 

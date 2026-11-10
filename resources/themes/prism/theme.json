@@ -1,0 +1,46 @@
+{
+  "id": "prism",
+  "name": "Prism",
+  "version": "1.0.0",
+  "description": "Liquid glass",
+  "author": "siberanka",
+  "scheme": "dark",
+  "stylesheet": "late",
+  "tokens": {
+    "c-bg": "#070b14",
+    "c-surface": "#111a2b",
+    "c-ink": "#f1f7ff",
+    "c-muted": "#a9b9d0",
+    "c-line": "#3b4d6b",
+    "c-accent": "#63e6d3",
+    "c-accent-ink": "#04201c",
+    "c-focus": "#b9fff4",
+    "c-danger": "#ff9fb0",
+    "c-success": "#8df0b0",
+    "r-panel": "22px",
+    "r-control": "14px"
+  },
+  "layout": {
+    "navigation": "floating",
+    "catalog": "tiles",
+    "home": [
+      "strip",
+      "worlds",
+      "news",
+      "purchases",
+      "store"
+    ]
+  },
+  "supports": [
+    "store",
+    "news",
+    "account",
+    "tickets",
+    "admin",
+    "installer"
+  ],
+  "requires": {
+    "vibecraft": "0.1",
+    "php": "8.4"
+  }
+}

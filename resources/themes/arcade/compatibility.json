@@ -1,0 +1,19 @@
+{
+  "vibecraft": "^0.1",
+  "views": "1",
+  "locales": [
+    "tr",
+    "en"
+  ],
+  "responsiveWidths": [
+    320,
+    375,
+    430,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "runtime": "Blade + CSS + ES modules",
+  "buildRequired": false
+}

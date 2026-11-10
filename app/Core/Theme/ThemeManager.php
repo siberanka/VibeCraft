@@ -68,6 +68,21 @@ class ThemeManager
         );
     }
 
+    /** Browser colour scheme of the theme, so native controls and scrollbars match it. */
+    public function scheme(?string $id = null): string
+    {
+        return ($this->manifest($id)['scheme'] ?? 'dark') === 'light' ? 'light' : 'dark';
+    }
+
+    /**
+     * Themes that restyle shared components load their stylesheet after the shared ones,
+     * so their rules win at equal specificity. The first five themes keep the early position.
+     */
+    public function loadsStylesheetLast(?string $id = null): bool
+    {
+        return ($this->manifest($id)['stylesheet'] ?? 'early') === 'late';
+    }
+
     /**
      * Effective tokens: manifest defaults overridden by validated admin values.
      *

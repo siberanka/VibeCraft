@@ -1,0 +1,46 @@
+{
+  "id": "terminal",
+  "name": "Terminal",
+  "version": "1.0.0",
+  "description": "Command console",
+  "author": "siberanka",
+  "scheme": "dark",
+  "stylesheet": "late",
+  "tokens": {
+    "c-bg": "#030906",
+    "c-surface": "#07140c",
+    "c-ink": "#b6ffc9",
+    "c-muted": "#5fbf7b",
+    "c-line": "#1f6b38",
+    "c-accent": "#5dff8f",
+    "c-accent-ink": "#021307",
+    "c-focus": "#f4ff7a",
+    "c-danger": "#ff8a7a",
+    "c-success": "#5dff8f",
+    "r-panel": "0px",
+    "r-control": "0px"
+  },
+  "layout": {
+    "navigation": "prompt",
+    "catalog": "listing",
+    "home": [
+      "strip",
+      "worlds",
+      "news",
+      "purchases",
+      "store"
+    ]
+  },
+  "supports": [
+    "store",
+    "news",
+    "account",
+    "tickets",
+    "admin",
+    "installer"
+  ],
+  "requires": {
+    "vibecraft": "0.1",
+    "php": "8.4"
+  }
+}

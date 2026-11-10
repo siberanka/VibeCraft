@@ -19,7 +19,7 @@ teslimat platformudur. Bu wiki kurulumu, ayarları ve günlük işletimi anlatı
 | [Mağaza](Magaza.md) | Kategoriler, ürünler, komutlar, süreli rütbeler, kuponlar, kredi paketleri ve kodları |
 | [Ödemeler](Odemeler.md) | Stripe, PayTR, webhook adresleri, cüzdan ve iadeler |
 | [Paper Eklentisi](Paper-Eklentisi.md) | Eklentiyi kurma, anahtarlar, izinli komutlar, hesap bağlama, teslimat kaydı |
-| [Görünüm ve Temalar](Gorunum-ve-Temalar.md) | Beş tema, renkler, bölüm sırası, menüler, özel CSS, görsel kütüphanesi |
+| [Görünüm ve Temalar](Gorunum-ve-Temalar.md) | On tema, renkler, bölüm sırası, menüler, özel CSS, görsel kütüphanesi |
 | [Topluluk Özellikleri](Topluluk-Ozellikleri.md) | Haberler, sayfalar, wiki, forum, destek, başvurular, oylar, sıralama, cezalar, Discord |
 | [Roller ve Yetkiler](Roller-ve-Yetkiler.md) | Hazır roller, yetki listesi, personel güvenliği |
 | [Güvenlik](Guvenlik.md) | Korunan dosyalar, CAPTCHA, Cloudflare, yedekler, açık bildirme |
@@ -36,7 +36,7 @@ teslimat platformudur. Bu wiki kurulumu, ayarları ve günlük işletimi anlatı
 | [Store](Store.md) | Categories, products, commands, timed ranks, coupons, credit packages and codes |
 | [Payments](Payments.md) | Stripe, PayTR, webhook addresses, wallet and refunds |
 | [Paper Plugin](Paper-Plugin.md) | Installing the plugin, keys, allowed commands, account linking, delivery journal |
-| [Appearance and Themes](Appearance-and-Themes.md) | Five themes, colours, section order, menus, custom CSS, image library |
+| [Appearance and Themes](Appearance-and-Themes.md) | Ten themes, colours, section order, menus, custom CSS, image library |
 | [Community Features](Community-Features.md) | News, pages, wiki, forum, support, applications, votes, leaderboards, punishments, Discord |
 | [Roles and Permissions](Roles-and-Permissions.md) | Built-in roles, permission list, staff security |
 | [Security](Security.md) | Protected files, CAPTCHA, Cloudflare, backups, reporting issues |

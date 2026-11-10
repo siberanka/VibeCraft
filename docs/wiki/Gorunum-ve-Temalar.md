@@ -6,7 +6,7 @@ Sitenizin görünümünü kod yazmadan değiştirin. Her değişiklik hemen uygu
 
 ## Temalar
 
-**Yönetim → Temalar** beş hazır temayı gösterir. Tema değiştirmek içeriği, hesapları ve siparişleri korur.
+**Yönetim → Temalar** on hazır temayı gösterir. Tema değiştirmek içeriği, hesapları ve siparişleri korur.
 
 | Tema | Kimin için |
 |---|---|
@@ -15,9 +15,15 @@ Sitenizin görünümünü kod yazmadan değiştirin. Her değişiklik hemen uygu
 | **Volt** | Rekabetçi ve arena sunucuları |
 | **Nomad** | Macera ve RPG sunucuları |
 | **Mono** | Sade siteler ve içerik üreticileri |
+| **Prism** | Modern sıvı cam görünümü: kuzey ışıklı gece üzerinde yarı saydam paneller ve imleci izleyen ışık |
+| **Arcade** | Retro piksel sunucular: piksel yazı, kabartmalı menü pencereleri ve basılan düğmeler |
+| **Terminal** | Yeşil fosforlu konsol: eş aralıklı yazı, komut satırı tarzı başlıklar ve tarama çizgileri |
+| **Brick** | Aydınlık ve samimi açık tema: kalın çerçeveler, sert gölgeler ve düz renkli bloklar |
+| **Dusk** | Seksenler neon gün batımı: bantlı gökyüzü, parlayan çerçeveler ve ufka uzanan ızgara |
 
 Her temanın kendi yerleşimi, yazı tipleri ve özgün görselleri vardır; seçmeden önce kendi içeriğinizle
-deneyin. Bütün temaların ekran görüntüleri [README](../../README.md#screenshots) dosyasında.
+deneyin. Mono ve Brick açık renkli, diğerleri koyu temalardır. Prism'in cam efekti arka plan bulanıklığı
+kullanır; eski tarayıcılarda paneller düz renkli görünür. Bütün temaların ekran görüntüleri [README](../../README.md#screenshots) dosyasında.
 
 ## Tema renkleri
 

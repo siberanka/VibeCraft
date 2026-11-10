@@ -11,6 +11,11 @@
         'volt' => 'An angular voxel arena with orange light and dark stone.',
         'nomad' => 'Monumental sandstone ruins above a vast desert canyon.',
         'mono' => 'Snow-covered voxel islands in a quiet monochrome landscape.',
+        'prism' => 'Pixel-art aurora over a still lake with tall ice shards.',
+        'arcade' => 'A bright pixel-art valley with a stone keep, a river and block clouds.',
+        'terminal' => 'A moonlit keep above the water, drawn in four shades of green.',
+        'brick' => 'A pile of colourful toy blocks with a yellow sun and white clouds.',
+        'dusk' => 'A pixel-art sunset with a glowing gateway and a grid running to the horizon.',
     ];
     $sceneFile = 'assets/images/'.$sceneTheme.'-landscape.webp';
 @endphp

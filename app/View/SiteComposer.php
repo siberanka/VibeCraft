@@ -89,6 +89,8 @@ class SiteComposer
             'onlineTotal' => $online,
             'navPages' => $navPages,
             'themeId' => $this->themes->active(),
+            'themeScheme' => $this->themes->scheme(),
+            'themeLate' => $this->themes->loadsStylesheetLast(),
             'homeSections' => $this->layout->visible($this->themes->active()),
             'themeCss' => $this->themes->cssVariables(),
         ];

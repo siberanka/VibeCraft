@@ -57,7 +57,7 @@ return [
         'mimes' => ['image/jpeg', 'image/png', 'image/webp', 'image/gif'],
     ],
 
-    'themes' => ['atlas', 'forge', 'volt', 'nomad', 'mono'],
+    'themes' => ['atlas', 'forge', 'volt', 'nomad', 'mono', 'prism', 'arcade', 'terminal', 'brick', 'dusk'],
 
     'setup_token_file' => storage_path('app/setup-token.sha256'),
 

@@ -33,10 +33,29 @@ teslimat platformudur. Türkçe ve İngilizce hazır gelir.
 
 <sub>Ekran görüntülerinde örnek verili hayali bir demo sunucu ("Emberfall") ve pakette gelen görseller kullanılmıştır.</sub>
 
+### Temalar
+
+On hazır tema gelir; hepsi yönetim panelinden tek tıkla değişir, içerik ve siparişler yerinde kalır.
+
+| Prism — sıvı cam | Arcade — retro piksel |
+|---|---|
+| ![Prism teması](docs/screenshots/home-prism.webp) | ![Arcade teması](docs/screenshots/home-arcade.webp) |
+| **Terminal — komut konsolu** | **Brick — cesur bloklar** |
+| ![Terminal teması](docs/screenshots/home-terminal.webp) | ![Brick teması](docs/screenshots/home-brick.webp) |
+| **Dusk — neon gün batımı** | **Forge — hayatta kalma ve ekonomi** |
+| ![Dusk teması](docs/screenshots/home-dusk.webp) | ![Forge teması](docs/screenshots/home-forge.webp) |
+| **Volt — rekabetçi arena** | **Nomad — macera ve RPG** |
+| ![Volt teması](docs/screenshots/home-volt.webp) | ![Nomad teması](docs/screenshots/home-nomad.webp) |
+| **Mono — sade** | **Atlas — sunucu ağı** |
+| ![Mono teması](docs/screenshots/home-mono.webp) | ![Atlas teması](docs/screenshots/home-atlas.webp) |
+
+Tema ayrıntıları: [Wiki → Görünüm ve Temalar](docs/wiki/Gorunum-ve-Temalar.md).
+
 ### Özellikler
 
-- Beş hazır tema (Atlas, Forge, Volt, Nomad, Mono); tema renk düzenleyici, ana sayfa bölüm sırası, üst/alt
-  menü düzenleyici ve denetlenen özel CSS.
+- On hazır tema: Atlas, Forge, Volt, Nomad, Mono ve yeni Prism (sıvı cam), Arcade (retro piksel), Terminal
+  (komut konsolu), Brick (cesur bloklar), Dusk (neon gün batımı). Tema renk düzenleyici, ana sayfa bölüm
+  sırası, üst/alt menü düzenleyici ve denetlenen özel CSS.
 - Mağaza: kategoriler, kuponlar, kredi kodları, bonuslu kredi paketleri, başka oyuncuya hediye, hesap
   bakiyesinden otomatik yenilenen süreli rütbeler ve teslimat sandığı.
 - Her hareketin bir kez işlendiği cüzdan defteri; imzalı webhook'larla Stripe ve PayTR ödemeleri.
@@ -114,6 +133,14 @@ Turkish and English out of the box.
 | ![Forge theme](docs/screenshots/home-forge.webp) | ![Volt theme](docs/screenshots/home-volt.webp) |
 | **Nomad** | **Mono** |
 | ![Nomad theme](docs/screenshots/home-nomad.webp) | ![Mono theme](docs/screenshots/home-mono.webp) |
+| **Prism — liquid glass** | **Arcade — retro pixel** |
+| ![Prism theme](docs/screenshots/home-prism.webp) | ![Arcade theme](docs/screenshots/home-arcade.webp) |
+| **Terminal — command console** | **Brick — bold blocks** |
+| ![Terminal theme](docs/screenshots/home-terminal.webp) | ![Brick theme](docs/screenshots/home-brick.webp) |
+| **Dusk — neon sunset** | **Atlas — network** |
+| ![Dusk theme](docs/screenshots/home-dusk.webp) | ![Atlas theme](docs/screenshots/home-atlas.webp) |
+
+Theme details: [Wiki → Appearance and Themes](docs/wiki/Appearance-and-Themes.md).
 
 #### Store and servers
 
@@ -131,8 +158,9 @@ Turkish and English out of the box.
 
 ### Features
 
-- Five built-in themes (Atlas, Forge, Volt, Nomad, Mono) with a theme editor, home-section ordering,
-  header/footer menu editor and checked custom CSS.
+- Ten built-in themes: Atlas, Forge, Volt, Nomad, Mono and the new Prism (liquid glass), Arcade (retro
+  pixel), Terminal (command console), Brick (bold blocks) and Dusk (neon sunset), with a theme editor,
+  home-section ordering, header/footer menu editor and checked custom CSS.
 - Store with categories, coupons, gift codes, credit packages with bonus credit, gifts to other players,
   timed ranks with automatic renewal from the account balance and a delivery chest.
 - Wallet ledger with idempotent postings; Stripe and PayTR payments with signed webhooks.

@@ -15,7 +15,7 @@ class ConnectionPresentationTest extends TestCase
 {
     public static function themes(): array
     {
-        return array_map(fn (string $theme) => [$theme], ['atlas', 'forge', 'volt', 'nomad', 'mono']);
+        return array_map(fn (string $theme) => [$theme], ['atlas', 'forge', 'volt', 'nomad', 'mono', 'prism', 'arcade', 'terminal', 'brick', 'dusk']);
     }
 
     #[DataProvider('themes')]

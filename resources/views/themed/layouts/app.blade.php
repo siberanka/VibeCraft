@@ -3,18 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="{{ ($themeId ?? 'atlas') === 'mono' ? 'light' : 'dark' }}">
+    <meta name="color-scheme" content="{{ $themeScheme ?? 'dark' }}">
     {{-- Laravel escapes inline sections and fallback values; escape markup without encoding their entities twice. --}}
     <meta name="description" content="{!! e($__env->yieldContent('description', $site['description'] ?? ''), false) !!}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{!! e(trim($__env->yieldContent('title', $site['name'] ?? 'VibeCraft')), false) !!}@if($__env->hasSection('title')) — {{ $site['name'] ?? 'VibeCraft' }}@endif</title>
     <link rel="stylesheet" href="{{ asset('assets/site.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/themes/'.($themeId ?? 'atlas').'.css') }}">
+    @unless($themeLate ?? false)<link rel="stylesheet" href="{{ asset('assets/themes/'.($themeId ?? 'atlas').'.css') }}">@endunless
     <link rel="stylesheet" href="{{ asset('assets/minecraft.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/interface.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/world-details.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/knowledge.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/showcase.css') }}">
+    @if($themeLate ?? false)<link rel="stylesheet" href="{{ asset('assets/themes/'.($themeId ?? 'atlas').'.css') }}">@endif
     @if(!empty($site['custom_css']) && ! request()->is('admin', 'admin/*'))<link rel="stylesheet" href="{{ route('custom-css', ['v' => $site['custom_css']]) }}">@endif
     <style nonce="{{ app(\App\Core\Security\CspNonce::class)->get() }}">{!! $themeCss ?? '' !!}</style>
     <noscript><style nonce="{{ app(\App\Core\Security\CspNonce::class)->get() }}">[data-copy]{display:none!important}</style></noscript>

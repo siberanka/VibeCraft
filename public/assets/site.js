@@ -151,3 +151,16 @@ window.addEventListener('pageshow', () => {
     pendingForms.clear();
     if (actionStatus) actionStatus.textContent = '';
 });
+
+// Prism theme: the glass panes share one highlight that follows a fine pointer.
+if (document.documentElement.dataset.theme === 'prism' && matchMedia('(pointer: fine)').matches && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let lightFrame = 0;
+    window.addEventListener('pointermove', event => {
+        if (lightFrame) return;
+        lightFrame = requestAnimationFrame(() => {
+            lightFrame = 0;
+            document.documentElement.style.setProperty('--prism-light-x', `${event.clientX}px`);
+            document.documentElement.style.setProperty('--prism-light-y', `${event.clientY}px`);
+        });
+    }, { passive: true });
+}

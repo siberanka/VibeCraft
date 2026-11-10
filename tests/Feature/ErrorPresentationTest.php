@@ -15,7 +15,7 @@ class ErrorPresentationTest extends TestCase
             abort($status, 'internal-fixture-detail', ['Retry-After' => '60']);
         });
 
-        foreach (['atlas', 'forge', 'volt', 'nomad', 'mono'] as $theme) {
+        foreach (['atlas', 'forge', 'volt', 'nomad', 'mono', 'prism', 'arcade', 'terminal', 'brick', 'dusk'] as $theme) {
             app(Settings::class)->set('theme.active', $theme);
             app(ThemeManager::class)->use($theme);
             foreach ([403, 404, 419, 429, 500, 503] as $status) {

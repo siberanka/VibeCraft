@@ -1,0 +1,46 @@
+{
+  "id": "dusk",
+  "name": "Dusk",
+  "version": "1.0.0",
+  "description": "Neon sunset",
+  "author": "siberanka",
+  "scheme": "dark",
+  "stylesheet": "late",
+  "tokens": {
+    "c-bg": "#12061f",
+    "c-surface": "#1e0c33",
+    "c-ink": "#fff0fa",
+    "c-muted": "#cfa9d6",
+    "c-line": "#5b2a86",
+    "c-accent": "#ff5fb0",
+    "c-accent-ink": "#2a0016",
+    "c-focus": "#ffe66d",
+    "c-danger": "#ff9d8a",
+    "c-success": "#7df2c0",
+    "r-panel": "8px",
+    "r-control": "4px"
+  },
+  "layout": {
+    "navigation": "neon",
+    "catalog": "cards",
+    "home": [
+      "strip",
+      "worlds",
+      "news",
+      "purchases",
+      "store"
+    ]
+  },
+  "supports": [
+    "store",
+    "news",
+    "account",
+    "tickets",
+    "admin",
+    "installer"
+  ],
+  "requires": {
+    "vibecraft": "0.1",
+    "php": "8.4"
+  }
+}

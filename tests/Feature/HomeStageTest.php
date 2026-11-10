@@ -17,7 +17,7 @@ class HomeStageTest extends TestCase
 {
     public static function themes(): array
     {
-        return array_map(fn (string $theme) => [$theme], ['atlas', 'forge', 'volt', 'nomad', 'mono']);
+        return array_map(fn (string $theme) => [$theme], ['atlas', 'forge', 'volt', 'nomad', 'mono', 'prism', 'arcade', 'terminal', 'brick', 'dusk']);
     }
 
     private function useTheme(string $theme): void

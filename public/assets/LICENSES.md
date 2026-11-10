@@ -4,7 +4,7 @@
 
 The interface icons in `resources/views/themed/partials/icon.blade.php` and the default voxel brand mark in `resources/views/themed/partials/brand-voxel.blade.php` are original VibeCraft vector paths. They may be redistributed with VibeCraft under the VibeCraft License (see LICENSE). No external icon library or icon CDN is required.
 
-Landscape illustrations bundled in `images/` are original project artwork released under the VibeCraft License (see LICENSE). They depict fictional voxel environments and do not claim to be screenshots of an installed server. No Minecraft game textures, third-party server logos, competitor templates or competitor artwork are included.
+Landscape illustrations bundled in `images/` are original project artwork released under the VibeCraft License (see LICENSE). The pixel-art and flat-colour scenes of the Prism, Arcade, Terminal, Brick and Dusk themes are drawn from code by `tools/themes/build_artwork.py` with fixed seeds, so they can be regenerated and contain no traced or third-party material. They depict fictional voxel environments and do not claim to be screenshots of an installed server. No Minecraft game textures, third-party server logos, competitor templates or competitor artwork are included.
 
 ## Bundled icon library
 
@@ -12,7 +12,7 @@ The ready-made icons in `library/` (rank tags, tools, weapons, armour, keys, cra
 
 ## Typefaces
 
-Manrope, Bitter, Archivo Narrow and Alegreya are distributed unmodified under the SIL Open Font License 1.1. The original copyright notices and complete terms are retained in `fonts/manrope-OFL.txt`, `fonts/bitter-OFL.txt`, `fonts/archivonarrow-OFL.txt` and `fonts/alegreya-OFL.txt`.
+Manrope, Bitter, Archivo Narrow, Alegreya, Pixelify Sans, VT323, Archivo Black and Righteous are distributed unmodified under the SIL Open Font License 1.1. The original copyright notices and complete terms are retained next to each font as `fonts/<family>-OFL.txt`.
 
 Sources and file hashes are documented in `fonts/README.md` and `fonts/SHA256SUMS`. The font licences permit commercial use and redistribution subject to their terms, including preserving their notices and respecting reserved font names when modified.
 

@@ -1,11 +1,15 @@
 @php
     $errorTheme = 'atlas';
     $errorCss = '';
+    $errorScheme = 'dark';
+    $errorLate = false;
     $errorSite = (string) config('app.name', 'VibeCraft');
     try {
         $errorThemes = app(\App\Core\Theme\ThemeManager::class);
         $errorTheme = $errorThemes->active();
         $errorCss = $errorThemes->cssVariables();
+        $errorScheme = $errorThemes->scheme();
+        $errorLate = $errorThemes->loadsStylesheetLast();
         $errorSite = (string) app(\App\Core\Settings\Settings::class)->get('site.name', $errorSite);
     } catch (\Throwable) {
         // Error recovery does not depend on session, account or navigation queries.
@@ -17,13 +21,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="color-scheme" content="{{ $errorTheme === 'mono' ? 'light' : 'dark' }}">
+    <meta name="color-scheme" content="{{ $errorScheme }}">
     <title>{{ $heading }} — {{ $errorSite }}</title>
     <link rel="stylesheet" href="/assets/site.css">
-    <link rel="stylesheet" href="/assets/themes/{{ $errorTheme }}.css">
+    @unless($errorLate)<link rel="stylesheet" href="/assets/themes/{{ $errorTheme }}.css">@endunless
     <link rel="stylesheet" href="/assets/minecraft.css">
     <link rel="stylesheet" href="/assets/interface.css">
     <link rel="stylesheet" href="/assets/world-details.css">
+    @if($errorLate)<link rel="stylesheet" href="/assets/themes/{{ $errorTheme }}.css">@endif
     <style nonce="{{ app(\App\Core\Security\CspNonce::class)->get() }}">{!! $errorCss !!}</style>
 </head>
 <body class="portal-page failure-page">

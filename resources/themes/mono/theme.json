@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Minimal creator",
   "author": "siberanka",
+  "scheme": "light",
   "tokens": {
     "c-bg": "#fafaf7",
     "c-surface": "#efefea",

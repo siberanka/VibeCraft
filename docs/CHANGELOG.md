@@ -1,5 +1,21 @@
 # Değişiklik kaydı
 
+## Geliştirme sürümü — 11 Kasım 2026
+
+- Beş yeni tema eklendi; toplam on tema oldu. **Prism** (sıvı cam: kuzey ışıkları
+  üzerinde yarı saydam paneller, imleci izleyen ışık), **Arcade** (retro piksel:
+  piksel yazı, kabartmalı pencereler, basılan düğmeler), **Terminal** (komut
+  konsolu: tek renk fosfor, eş aralıklı yazı, tarama çizgileri), **Brick** (açık
+  renkli, kalın çerçeveli ve sert gölgeli bloklar) ve **Dusk** (neon gün batımı:
+  bantlı gökyüzü, ufka uzanan ızgara). Her temanın kendi ana sayfa düzeni, yazı
+  tipi ve özgün görseli vardır; mağaza, hesap, destek ve yönetim sayfaları da
+  temaya uyar.
+- Yeni tema görselleri koddan üretilen özgün piksel sanat ve düz renkli çizimlerdir
+  (`tools/themes/build_artwork.py`); üçüncü taraf görsel içermez. Yeni yazı tipleri
+  (Pixelify Sans, VT323, Archivo Black, Righteous) SIL OFL 1.1 ile yerel sunulur.
+- Tema tanımı artık açık/koyu renk düzenini ve stil dosyasının yüklenme sırasını
+  bildirebilir; açık temalarda tarayıcı denetimleri de açık görünür.
+
 ## Geliştirme sürümü — 29 Ekim 2026
 
 - Yönetim paneline Görünüm araçları eklendi: tema başına ana sayfa bölümlerinin
