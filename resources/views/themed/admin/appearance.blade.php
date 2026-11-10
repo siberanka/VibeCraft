@@ -14,12 +14,22 @@
 </div>
 @endforeach
 </fieldset>
+<fieldset class="art-choice"><legend>{{ __('Home artwork') }}</legend>
+<p class="hint">{{ __('Each theme comes with its own picture. Keep it, use one of your images, or show the home page without a picture.') }}</p>
+<div class="art-options">
+    <label class="art-option" for="art-default"><input id="art-default" type="radio" name="art_mode" value="default" @checked(old('art_mode', $art['mode']) === 'default')>
+        <img src="{{ asset('assets/images/'.$theme.'-landscape-768.webp') }}" alt="" width="192" height="108" loading="lazy"><span>{{ __('Theme picture') }}</span></label>
+    <label class="art-option" for="art-own"><input id="art-own" type="radio" name="art_mode" value="own" @checked(old('art_mode', $art['mode']) === 'own')><span>{{ __('My own image') }}</span></label>
+    <label class="art-option" for="art-none"><input id="art-none" type="radio" name="art_mode" value="none" @checked(old('art_mode', $art['mode']) === 'none')><span>{{ __('No picture') }}</span></label>
+</div>
+@include('theme::partials.media-picker', ['pickerName' => 'art_media_id', 'pickerId' => 'art-media', 'pickerLabel' => __('My own image'), 'pickerValue' => old('art_media_id', $art['media']), 'pickerHint' => __('Used when "My own image" is selected. A wide picture of at least 1600 pixels works best.')])
+</fieldset>
 <fieldset><legend>{{ __('Hide from the main menu') }}</legend>
 @foreach(\App\Core\Theme\HomeLayout::NAV_KEYS as $navKey)
 <label class="checkbox" for="nav-{{ $navKey }}"><input id="nav-{{ $navKey }}" name="nav_hidden[]" type="checkbox" value="{{ $navKey }}" @checked(in_array($navKey, $navHidden, true))><span>{{ __('navkey.'.$navKey) }}</span></label>
 @endforeach
 </fieldset>
-<div class="form-actions"><button class="button" type="submit">{{ __('Save changes') }}</button><a href="{{ route('admin.themes.tokens', $theme) }}">{{ __('Theme colours') }}</a><a href="{{ route('admin.menus.index') }}">{{ __('Menus') }}</a><a href="{{ route('admin.custom-css') }}">{{ __('Custom CSS') }}</a></div>
+<div class="form-actions"><button class="button" type="submit">{{ __('Save changes') }}</button></div>
 </form>
 </div>
 @endsection

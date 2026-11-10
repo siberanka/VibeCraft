@@ -20,6 +20,40 @@
     "r-panel": "22px",
     "r-control": "14px"
   },
+  "palettes": {
+    "rose": {
+      "name": "Rose",
+      "tokens": {
+        "c-accent": "#ff8fb8",
+        "c-accent-ink": "#2a0715",
+        "c-focus": "#ffc7dc"
+      }
+    },
+    "gold": {
+      "name": "Gold",
+      "tokens": {
+        "c-accent": "#ffd27a",
+        "c-accent-ink": "#241800",
+        "c-focus": "#ffe9bd"
+      }
+    },
+    "violet": {
+      "name": "Violet",
+      "tokens": {
+        "c-accent": "#b9a2ff",
+        "c-accent-ink": "#130a33",
+        "c-focus": "#dcd1ff"
+      }
+    },
+    "lime": {
+      "name": "Lime",
+      "tokens": {
+        "c-accent": "#b6f08a",
+        "c-accent-ink": "#0f2203",
+        "c-focus": "#dbf8c4"
+      }
+    }
+  },
   "layout": {
     "navigation": "floating",
     "catalog": "tiles",

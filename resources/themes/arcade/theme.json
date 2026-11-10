@@ -20,6 +20,41 @@
     "r-panel": "0px",
     "r-control": "0px"
   },
+  "palettes": {
+    "grass": {
+      "name": "Grass",
+      "tokens": {
+        "c-accent": "#6fdc6a",
+        "c-accent-ink": "#0a2408",
+        "c-focus": "#7df9ff"
+      }
+    },
+    "ruby": {
+      "name": "Ruby",
+      "tokens": {
+        "c-accent": "#ff7a6b",
+        "c-accent-ink": "#2a0703",
+        "c-focus": "#7df9ff"
+      }
+    },
+    "ice": {
+      "name": "Ice",
+      "tokens": {
+        "c-accent": "#7fd6ff",
+        "c-accent-ink": "#03202e",
+        "c-focus": "#ffe066"
+      }
+    },
+    "cabinet": {
+      "name": "Cabinet",
+      "tokens": {
+        "c-bg": "#101114",
+        "c-surface": "#1c1e26",
+        "c-muted": "#b3b7c7",
+        "c-line": "#3d4257"
+      }
+    }
+  },
   "layout": {
     "navigation": "hotbar",
     "catalog": "inventory",

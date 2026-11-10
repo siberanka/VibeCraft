@@ -20,6 +20,40 @@
     "r-panel": "10px",
     "r-control": "8px"
   },
+  "palettes": {
+    "tomato": {
+      "name": "Tomato",
+      "tokens": {
+        "c-accent": "#c62f12",
+        "c-accent-ink": "#ffffff",
+        "c-focus": "#2450e6"
+      }
+    },
+    "forest": {
+      "name": "Forest",
+      "tokens": {
+        "c-accent": "#0f7a4d",
+        "c-accent-ink": "#ffffff",
+        "c-focus": "#b3126e"
+      }
+    },
+    "grape": {
+      "name": "Grape",
+      "tokens": {
+        "c-accent": "#7a2fd0",
+        "c-accent-ink": "#ffffff",
+        "c-focus": "#b3126e"
+      }
+    },
+    "ink": {
+      "name": "Ink",
+      "tokens": {
+        "c-accent": "#14110f",
+        "c-accent-ink": "#fff1cf",
+        "c-focus": "#2450e6"
+      }
+    }
+  },
   "layout": {
     "navigation": "tabs",
     "catalog": "stickers",

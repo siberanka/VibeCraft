@@ -13,6 +13,14 @@
 - Yeni tema görselleri koddan üretilen özgün piksel sanat ve düz renkli çizimlerdir
   (`tools/themes/build_artwork.py`); üçüncü taraf görsel içermez. Yeni yazı tipleri
   (Pixelify Sans, VT323, Archivo Black, Righteous) SIL OFL 1.1 ile yerel sunulur.
+- Yönetim menüsü altı alana ayrıldı (Genel bakış, Mağaza, İçerik, Topluluk, Görünüm,
+  Sistem); seçili alanın sayfaları ikinci satırda görünür ve rolün açamadığı alanlar
+  gizlenir.
+- Her temaya hazır renk paletleri eklendi (tek tıkla uygulanır, tema varsayılanına
+  dönülebilir); kendi renklerini seçme düzenleyicisi aynı sayfada duruyor ve okunabilirlik
+  denetimi her ikisinde de geçerli.
+- Ana sayfa görseli artık tema başına yönetiliyor: temanın görseli, kendi görselin ya da
+  görselsiz. Tema seçim ekranı önizlemeli kartlara dönüştü.
 - On temanın hepsine temaya özgü küçük ayrıntılar eklendi: her ana sayfa bölüm başlığının
   kendi işareti, çevrimiçi sunucularda "canlı" işareti, IP kopyalanınca kısa tepki, fiyat,
   tarih ve hata sayfası işlemeleri, üstte okuma ilerleme çizgisi ve gizli bir kutlama

@@ -20,6 +20,40 @@
     "r-panel": "8px",
     "r-control": "4px"
   },
+  "palettes": {
+    "miami": {
+      "name": "Miami",
+      "tokens": {
+        "c-accent": "#3fe0ff",
+        "c-accent-ink": "#02222b",
+        "c-focus": "#ffe66d"
+      }
+    },
+    "ember": {
+      "name": "Ember",
+      "tokens": {
+        "c-accent": "#ff8a4c",
+        "c-accent-ink": "#2a1000",
+        "c-focus": "#ffe66d"
+      }
+    },
+    "lime": {
+      "name": "Lime",
+      "tokens": {
+        "c-accent": "#c6ff5e",
+        "c-accent-ink": "#182600",
+        "c-focus": "#ffe66d"
+      }
+    },
+    "violet": {
+      "name": "Violet",
+      "tokens": {
+        "c-accent": "#b48cff",
+        "c-accent-ink": "#1a0a3a",
+        "c-focus": "#ffe66d"
+      }
+    }
+  },
   "layout": {
     "navigation": "neon",
     "catalog": "cards",

@@ -144,6 +144,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'can:admin.access', 
     Route::get('/themes/{theme}/colours', [AdminThemeTokenController::class, 'edit'])->middleware('can:appearance.manage')->name('themes.tokens');
     Route::put('/themes/{theme}/colours', [AdminThemeTokenController::class, 'update'])->middleware('can:appearance.manage')->name('themes.tokens.update');
     Route::post('/themes/{theme}/colours/reset', [AdminThemeTokenController::class, 'reset'])->middleware('can:appearance.manage')->name('themes.tokens.reset');
+    Route::post('/themes/{theme}/palette', [AdminThemeTokenController::class, 'palette'])->middleware('can:appearance.manage')->name('themes.palette');
     Route::put('/themes', [AdminController::class, 'saveTheme'])->middleware('can:appearance.manage')->name('themes.update');
     Route::get('/gift-codes', [GiftCodeController::class, 'index'])->middleware('can:finance.wallet_adjust')->name('gift-codes.index');
     Route::post('/gift-codes', [GiftCodeController::class, 'store'])->middleware(['can:finance.wallet_adjust', 'throttle:account-actions'])->name('gift-codes.store');

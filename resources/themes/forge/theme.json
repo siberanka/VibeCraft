@@ -18,6 +18,40 @@
     "r-panel": "4px",
     "r-control": "4px"
   },
+  "palettes": {
+    "moss": {
+      "name": "Moss",
+      "tokens": {
+        "c-accent": "#a9c47f",
+        "c-accent-ink": "#1c2410",
+        "c-focus": "#cfe3ae"
+      }
+    },
+    "ember": {
+      "name": "Ember",
+      "tokens": {
+        "c-accent": "#ff8f5a",
+        "c-accent-ink": "#2a1206",
+        "c-focus": "#ffc4a6"
+      }
+    },
+    "sand": {
+      "name": "Sand",
+      "tokens": {
+        "c-accent": "#e6cf8f",
+        "c-accent-ink": "#2a2209",
+        "c-focus": "#f3e5bd"
+      }
+    },
+    "frost": {
+      "name": "Frost",
+      "tokens": {
+        "c-accent": "#8fc7d6",
+        "c-accent-ink": "#0c2228",
+        "c-focus": "#c3e4ec"
+      }
+    }
+  },
   "layout": {
     "navigation": "journal",
     "catalog": "editorial",

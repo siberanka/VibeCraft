@@ -281,7 +281,10 @@ class AdminController extends Controller
 
     public function themes(ThemeManager $manager)
     {
-        return view('theme::admin.themes', ['themes' => collect($manager->available())->mapWithKeys(fn ($id) => [$id => $manager->manifest($id)])->all(), 'activeTheme' => $manager->active()]);
+        return view('theme::admin.themes', [
+            'themes' => collect($manager->available())->mapWithKeys(fn ($id) => [$id => $manager->manifest($id) + ['effective' => $manager->tokens($id), 'light' => $manager->scheme($id) === 'light']])->all(),
+            'activeTheme' => $manager->active(),
+        ]);
     }
 
     public function saveTheme(Request $request, ThemeManager $manager)

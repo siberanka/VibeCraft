@@ -18,6 +18,40 @@
     "r-panel": "12px",
     "r-control": "6px"
   },
+  "palettes": {
+    "ember": {
+      "name": "Ember",
+      "tokens": {
+        "c-accent": "#ff8a4c",
+        "c-accent-ink": "#1f0d02",
+        "c-focus": "#ffc09a"
+      }
+    },
+    "orchid": {
+      "name": "Orchid",
+      "tokens": {
+        "c-accent": "#c58cff",
+        "c-accent-ink": "#1a0b2e",
+        "c-focus": "#e3c8ff"
+      }
+    },
+    "gold": {
+      "name": "Gold",
+      "tokens": {
+        "c-accent": "#e8c15a",
+        "c-accent-ink": "#1f1602",
+        "c-focus": "#f6e3a6"
+      }
+    },
+    "sky": {
+      "name": "Sky",
+      "tokens": {
+        "c-accent": "#5dade2",
+        "c-accent-ink": "#06131d",
+        "c-focus": "#a9d7f5"
+      }
+    }
+  },
   "layout": {
     "navigation": "network",
     "catalog": "comparison",

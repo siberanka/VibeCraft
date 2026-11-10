@@ -103,6 +103,50 @@ class ThemeManager
         return $tokens;
     }
 
+    /**
+     * Ready-made palettes of a theme: a name and the tokens it changes. Unknown or malformed tokens are dropped.
+     *
+     * @return array<string, array{name: string, tokens: array<string, string>}>
+     */
+    public function palettes(?string $id = null): array
+    {
+        $id ??= $this->active();
+        $defaults = $this->manifest($id)['tokens'] ?? [];
+        $palettes = [];
+        foreach ((array) ($this->manifest($id)['palettes'] ?? []) as $key => $palette) {
+            $tokens = [];
+            foreach ((array) ($palette['tokens'] ?? []) as $name => $value) {
+                if (isset($defaults[$name]) && self::isValidToken((string) $name, (string) $value)) {
+                    $tokens[(string) $name] = strtolower((string) $value);
+                }
+            }
+            if (preg_match('/^[a-z0-9-]{1,40}$/', (string) $key) && $tokens !== []) {
+                $palettes[(string) $key] = ['name' => (string) ($palette['name'] ?? $key), 'tokens' => $tokens];
+            }
+        }
+
+        return $palettes;
+    }
+
+    /**
+     * Home artwork choice of a theme: the bundled picture, the owner's own image, or none.
+     *
+     * @return array{mode: 'default'|'own'|'none', media: ?int}
+     */
+    public function art(?string $id = null): array
+    {
+        $id ??= $this->active();
+        $value = $this->settings->get("appearance.art.$id");
+        if ($value === 'none') {
+            return ['mode' => 'none', 'media' => null];
+        }
+        if (is_numeric($value) && (int) $value > 0) {
+            return ['mode' => 'own', 'media' => (int) $value];
+        }
+
+        return ['mode' => 'default', 'media' => null];
+    }
+
     public function cssVariables(?string $id = null): string
     {
         $lines = [];

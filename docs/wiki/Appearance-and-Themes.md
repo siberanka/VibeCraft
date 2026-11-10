@@ -7,7 +7,8 @@ audit log.
 
 ## Themes
 
-**Admin → Themes** shows ten built-in themes. Switching themes keeps all content, accounts and orders.
+**Admin → Appearance → Themes** shows the ten built-in themes as cards with a preview, the current colours and
+whether the theme is light or dark. Switching themes keeps all content, accounts and orders.
 
 | Theme | Made for |
 |---|---|
@@ -48,9 +49,31 @@ who ask their device for reduced motion. To turn the celebration off, add `.them
 
 ## Theme colours
 
-**Admin → Themes → Theme colours** lets you change the colour tokens of the active theme
-(backgrounds, text, accent, buttons and borders) and the corner radius. **Restore theme defaults** brings back
-the original palette. Choose colours with enough contrast; the theme's text and focus styles depend on them.
+**Admin → Appearance → Theme colours** (or **Colours** on a theme card) has two parts:
+
+- **Ready palettes**: every theme comes with several palettes made for it. One press applies a palette;
+  **Theme default** brings the original colours back. The palette in use is marked.
+- **Your own colours**: change any colour (backgrounds, text, accent, focus, borders) and the corner radius
+  yourself, starting from the default or from a ready palette.
+
+Text colours are checked when you save: a combination that would be hard to read is refused with a message
+that names the two colours. Each theme keeps its own colours, so you can prepare several themes and switch
+between them.
+
+## Home artwork
+
+**Admin → Appearance → Theme settings** → **Home artwork** decides the picture on the home page of each theme:
+
+| Choice | Result |
+|---|---|
+| Theme picture | The original artwork that comes with the theme |
+| My own image | An image from your uploads or the image library; a wide picture of at least 1600 pixels works best |
+| No picture | The home page without a picture |
+
+Choosing **Theme picture** again restores the original at any time. The choice is saved per theme. The
+**Home image** in Settings is still used for every theme that keeps "Theme picture", so one image can cover
+all themes. An image used as home artwork is listed as "in use" in the media library and cannot be deleted
+by accident.
 
 ## Home sections
 

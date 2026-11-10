@@ -26,6 +26,7 @@ class AdminAppearanceController extends Controller
             'themeNames' => collect($this->themes->available())->mapWithKeys(fn ($id) => [$id => $this->themes->manifest($id)['name'] ?? $id])->all(),
             'rows' => $this->layout->rows($theme),
             'navHidden' => $this->layout->hiddenNavigation(),
+            'art' => $this->themes->art($theme),
         ]);
     }
 
@@ -38,6 +39,8 @@ class AdminAppearanceController extends Controller
             'sections.*.visible' => ['nullable', 'boolean'],
             'nav_hidden' => ['nullable', 'array'],
             'nav_hidden.*' => ['string', Rule::in(HomeLayout::NAV_KEYS)],
+            'art_mode' => ['nullable', Rule::in(['default', 'own', 'none'])],
+            'art_media_id' => ['nullable', 'integer', 'exists:media,id', 'required_if:art_mode,own'],
         ]);
 
         $defaults = $this->layout->defaults($data['theme']);
@@ -49,7 +52,16 @@ class AdminAppearanceController extends Controller
         usort($rows, fn ($a, $b) => $a['rank'] <=> $b['rank']);
         $rows = array_map(fn ($row) => ['key' => $row['key'], 'visible' => $row['visible']], $rows);
 
-        $this->settings->setMany(["appearance.home.{$data['theme']}" => $rows, 'appearance.nav_hidden' => array_values(array_unique($data['nav_hidden'] ?? []))]);
+        $values = ["appearance.home.{$data['theme']}" => $rows, 'appearance.nav_hidden' => array_values(array_unique($data['nav_hidden'] ?? []))];
+        if (isset($data['art_mode'])) {
+            // Bundled picture (null), the owner's own image (media id) or no picture at all.
+            $values["appearance.art.{$data['theme']}"] = match ($data['art_mode']) {
+                'own' => (int) $data['art_media_id'],
+                'none' => 'none',
+                default => null,
+            };
+        }
+        $this->settings->setMany($values);
         $audit->log('appearance.layout_updated', null, ['theme' => $data['theme']], $request->user()->id);
 
         return redirect()->route('admin.appearance', ['theme' => $data['theme']])->with('status', __('Saved.'));

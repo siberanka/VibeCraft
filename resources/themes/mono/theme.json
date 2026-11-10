@@ -19,6 +19,40 @@
     "r-panel": "2px",
     "r-control": "2px"
   },
+  "palettes": {
+    "ink": {
+      "name": "Ink",
+      "tokens": {
+        "c-accent": "#101214",
+        "c-accent-ink": "#fafaf7",
+        "c-focus": "#101214"
+      }
+    },
+    "forest": {
+      "name": "Forest",
+      "tokens": {
+        "c-accent": "#1f5c3a",
+        "c-accent-ink": "#fafaf7",
+        "c-focus": "#1f5c3a"
+      }
+    },
+    "navy": {
+      "name": "Navy",
+      "tokens": {
+        "c-accent": "#1f3f8e",
+        "c-accent-ink": "#fafaf7",
+        "c-focus": "#1f3f8e"
+      }
+    },
+    "plum": {
+      "name": "Plum",
+      "tokens": {
+        "c-accent": "#6b2a6e",
+        "c-accent-ink": "#fafaf7",
+        "c-focus": "#6b2a6e"
+      }
+    }
+  },
   "layout": {
     "navigation": "directory",
     "catalog": "list",

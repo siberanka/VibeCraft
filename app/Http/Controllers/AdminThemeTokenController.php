@@ -7,6 +7,7 @@ use App\Core\Settings\Settings;
 use App\Core\Theme\ThemeManager;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
 class AdminThemeTokenController extends Controller
@@ -25,7 +26,50 @@ class AdminThemeTokenController extends Controller
             'name' => $this->themes->manifest($theme)['name'] ?? $theme,
             'tokens' => $this->themes->tokens($theme),
             'defaults' => $this->themes->manifest($theme)['tokens'] ?? [],
+            'palettes' => $this->themes->palettes($theme),
+            'activePalette' => $this->activePalette($theme),
         ]);
+    }
+
+    /** Applies one of the theme's ready-made palettes; the custom editor can refine it afterwards. */
+    public function palette(Request $request, string $theme, AuditLogger $audit): RedirectResponse
+    {
+        abort_unless(in_array($theme, $this->themes->available(), true), 404);
+        $palettes = $this->themes->palettes($theme);
+        $data = $request->validate(['palette' => ['required', 'string', Rule::in(array_keys($palettes))]]);
+
+        $defaults = array_map('strtolower', $this->themes->manifest($theme)['tokens'] ?? []);
+        $values = array_filter($palettes[$data['palette']]['tokens'], fn ($value, $name) => $value !== ($defaults[$name] ?? null), ARRAY_FILTER_USE_BOTH);
+        $effective = array_merge($defaults, $values);
+        foreach (self::CONTRAST_PAIRS as [$fore, $back]) {
+            abort_if(isset($effective[$fore], $effective[$back]) && self::contrast($effective[$fore], $effective[$back]) < 4.5, 422);
+        }
+
+        $this->settings->set("theme.tokens.$theme", $values);
+        $audit->log('theme.palette_applied', null, ['theme' => $theme, 'palette' => $data['palette']], $request->user()->id);
+
+        return redirect()->route('admin.themes.tokens', $theme)->with('status', __('Saved.'));
+    }
+
+    /** The palette whose colours match the saved ones exactly: "default", a palette key, or "custom". */
+    private function activePalette(string $theme): string
+    {
+        $overrides = array_map('strtolower', (array) $this->settings->get("theme.tokens.$theme", []));
+        $colours = array_filter($overrides, fn ($name) => str_starts_with((string) $name, 'c-'), ARRAY_FILTER_USE_KEY);
+        if ($colours === []) {
+            return 'default';
+        }
+        $defaults = array_map('strtolower', $this->themes->manifest($theme)['tokens'] ?? []);
+        foreach ($this->themes->palettes($theme) as $key => $palette) {
+            $changed = array_filter($palette['tokens'], fn ($value, $name) => $value !== ($defaults[$name] ?? null), ARRAY_FILTER_USE_BOTH);
+            ksort($changed);
+            ksort($colours);
+            if ($changed === $colours) {
+                return $key;
+            }
+        }
+
+        return 'custom';
     }
 
     public function update(Request $request, string $theme, AuditLogger $audit): RedirectResponse

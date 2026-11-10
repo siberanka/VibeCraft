@@ -13,6 +13,11 @@ bağlı olmayan güvenli bir yerde saklayın.
 
 Yönetim paneli hassas sayfalardan önce zaman zaman şifrenizi yeniden ister.
 
+Yönetim menüsü altı alana ayrılır: **Genel bakış**, **Mağaza**, **İçerik**, **Topluluk**, **Görünüm** ve
+**Sistem**. Bir alana basınca sayfaları görünür; yalnızca rolünüzün açabildiği alanları görürsünüz. Bu wiki
+sayfanın kendi adını yazar; örneğin "Yönetim → Ayarlar" (Sistem altında) ya da "Yönetim → Ürünler" (Mağaza
+altında).
+
 ## 2. E-postayı ayarlayın
 
 Kayıt e-postaları, şifre sıfırlama ve sipariş kopyaları gerçek bir e-posta sunucusu ister. Kurulum

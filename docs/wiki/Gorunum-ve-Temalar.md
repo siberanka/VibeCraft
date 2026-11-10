@@ -6,7 +6,8 @@ Sitenizin görünümünü kod yazmadan değiştirin. Her değişiklik hemen uygu
 
 ## Temalar
 
-**Yönetim → Temalar** on hazır temayı gösterir. Tema değiştirmek içeriği, hesapları ve siparişleri korur.
+**Yönetim → Görünüm → Temalar**, on hazır temayı önizleme görseli, güncel renkleri ve açık/koyu bilgisiyle
+kartlar halinde gösterir. Tema değiştirmek içeriği, hesapları ve siparişleri korur.
 
 | Tema | Kimin için |
 |---|---|
@@ -45,9 +46,30 @@ azalt" seçeneğini açan ziyaretçiler için kapalıdır. Kutlamayı kapatmak i
 
 ## Tema renkleri
 
-**Yönetim → Temalar → Tema renkleri**, etkin temanın renk değerlerini (arka planlar, metin, vurgu,
-düğmeler ve kenarlıklar) ve köşe yuvarlaklığını değiştirir. **Tema varsayılanlarına dön** özgün paleti
-geri getirir. Yeterli kontrastı olan renkler seçin; metin ve odak görünümü bunlara bağlıdır.
+**Yönetim → Görünüm → Tema renkleri** (ya da tema kartındaki **Renkler**) iki bölümden oluşur:
+
+- **Hazır paletler**: her tema kendisi için hazırlanmış birkaç paletle gelir. Tek tıkla palet uygulanır;
+  **Tema varsayılanı** özgün renkleri geri getirir. Kullanılan palet işaretlidir.
+- **Kendi renklerin**: varsayılandan ya da hazır bir paletten başlayarak her rengi (arka planlar, metin,
+  vurgu, odak, kenarlıklar) ve köşe yuvarlaklığını kendiniz değiştirin.
+
+Kaydederken yazı renkleri denetlenir: okunması zor bir birleşim, iki rengin adını veren bir iletiyle
+reddedilir. Her tema kendi renklerini saklar; birkaç temayı hazırlayıp aralarında geçiş yapabilirsiniz.
+
+## Ana sayfa görseli
+
+**Yönetim → Görünüm → Tema ayarları** → **Ana sayfa görseli**, her temanın ana sayfasındaki görseli belirler:
+
+| Seçim | Sonuç |
+|---|---|
+| Tema görseli | Temayla gelen özgün görsel |
+| Kendi görselim | Yüklediklerinizden ya da görsel kütüphanesinden bir görsel; en az 1600 piksel genişliğinde geniş bir görsel en iyi sonucu verir |
+| Görsel yok | Ana sayfa görselsiz gösterilir |
+
+**Tema görseli** yeniden seçilerek özgün görsele her zaman dönülür. Seçim tema başına saklanır.
+Ayarlar'daki **Ana sayfa görseli**, "Tema görseli" seçili kalan bütün temalarda kullanılmaya devam eder;
+böylece tek bir görsel bütün temaları kapsayabilir. Ana sayfa görseli olarak kullanılan bir görsel, görsel
+kütüphanesinde "kullanımda" görünür ve yanlışlıkla silinemez.
 
 ## Ana sayfa bölümleri
 

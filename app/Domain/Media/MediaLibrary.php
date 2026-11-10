@@ -125,6 +125,11 @@ class MediaLibrary
                 $found[] = __($label);
             }
         }
+        foreach ((array) config('vibecraft.themes') as $theme) {
+            if ((int) $settings->get("appearance.art.$theme") === $media->id) {
+                $found[] = __('Home artwork').': '.ucfirst((string) $theme);
+            }
+        }
         $pattern = '~/media/'.$media->id.'(?![0-9])~';
         foreach ([[Product::class, 'description_markdown', 'Product'], [Post::class, 'body_markdown', 'News post'], [Page::class, 'body_markdown', 'Page'], [WikiArticle::class, 'body_markdown', 'Wiki page']] as [$model, $column, $label]) {
             $model::query()->where($column, 'like', '%/media/'.$media->id.'%')->limit(50)->get()
@@ -152,7 +157,8 @@ class MediaLibrary
             }
         }
         $settings = app(Settings::class);
-        foreach (array_keys(self::SETTINGS) as $key) {
+        $keys = array_merge(array_keys(self::SETTINGS), array_map(fn ($theme) => "appearance.art.$theme", (array) config('vibecraft.themes')));
+        foreach ($keys as $key) {
             $id = (int) $settings->get($key);
             if (isset($counts[$id])) {
                 $counts[$id]++;

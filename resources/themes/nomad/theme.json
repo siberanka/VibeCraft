@@ -18,6 +18,40 @@
     "r-panel": "2px",
     "r-control": "2px"
   },
+  "palettes": {
+    "jade": {
+      "name": "Jade",
+      "tokens": {
+        "c-accent": "#7fc8a9",
+        "c-accent-ink": "#0b231a",
+        "c-focus": "#b9e3d1"
+      }
+    },
+    "terracotta": {
+      "name": "Terracotta",
+      "tokens": {
+        "c-accent": "#e59a7a",
+        "c-accent-ink": "#2a1108",
+        "c-focus": "#f3c8b5"
+      }
+    },
+    "lapis": {
+      "name": "Lapis",
+      "tokens": {
+        "c-accent": "#86b5ea",
+        "c-accent-ink": "#0a1c30",
+        "c-focus": "#c0d9f5"
+      }
+    },
+    "ivory": {
+      "name": "Ivory",
+      "tokens": {
+        "c-accent": "#e8dcc0",
+        "c-accent-ink": "#24200f",
+        "c-focus": "#f4ecd9"
+      }
+    }
+  },
   "layout": {
     "navigation": "chapters",
     "catalog": "collections",

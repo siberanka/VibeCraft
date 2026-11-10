@@ -13,6 +13,10 @@ offline.
 
 The admin panel also asks for your password again from time to time before sensitive pages.
 
+The admin menu has six areas: **Overview**, **Store**, **Content**, **Community**, **Appearance** and
+**System**. Pressing an area shows its pages; you only see the areas your role may open. This wiki names the
+page itself, for example "Admin → Settings" (under System) or "Admin → Products" (under Store).
+
 ## 2. Configure e-mail
 
 Registration e-mails, password resets and order copies need a real mail server. The installer does not ask

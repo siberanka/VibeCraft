@@ -1,6 +1,12 @@
-@if(!empty($site['hero']) && ($sceneOperatorImage ?? true))
+@php
+    // The choice made for this theme wins; the site-wide home image is the fallback before the bundled picture.
+    $sceneArt = ($sceneOperatorImage ?? true) ? ($themeArt ?? ['mode' => 'default', 'media' => null]) : ['mode' => 'default', 'media' => null];
+    $sceneOwn = $sceneArt['mode'] === 'own' ? route('media.show', ['media' => $sceneArt['media']]) : ((($sceneOperatorImage ?? true) && $sceneArt['mode'] === 'default') ? ($site['hero'] ?? null) : null);
+@endphp
+@if($sceneArt['mode'] === 'none')
+@elseif(!empty($sceneOwn))
 <figure class="world-scene operator-scene {{ $sceneClass ?? '' }}">
-    <img src="{{ $site['hero'] }}" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
+    <img src="{{ $sceneOwn }}" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
 </figure>
 @else
 @php

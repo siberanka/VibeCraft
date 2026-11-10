@@ -20,6 +20,50 @@
     "r-panel": "0px",
     "r-control": "0px"
   },
+  "palettes": {
+    "amber": {
+      "name": "Amber",
+      "tokens": {
+        "c-bg": "#0a0600",
+        "c-surface": "#140c02",
+        "c-ink": "#ffd9a0",
+        "c-muted": "#c2923f",
+        "c-line": "#6b4a14",
+        "c-accent": "#ffb347",
+        "c-accent-ink": "#1a0f00",
+        "c-focus": "#fff27a",
+        "c-success": "#ffb347"
+      }
+    },
+    "ice": {
+      "name": "Ice",
+      "tokens": {
+        "c-bg": "#020809",
+        "c-surface": "#06141a",
+        "c-ink": "#b6f3ff",
+        "c-muted": "#5fb4c4",
+        "c-line": "#1f5f6b",
+        "c-accent": "#5de6ff",
+        "c-accent-ink": "#01131a",
+        "c-focus": "#f4ff7a",
+        "c-success": "#5de6ff"
+      }
+    },
+    "paper-white": {
+      "name": "Paper white",
+      "tokens": {
+        "c-bg": "#08090a",
+        "c-surface": "#121416",
+        "c-ink": "#e8ebee",
+        "c-muted": "#9aa3ab",
+        "c-line": "#4a5158",
+        "c-accent": "#f2f5f7",
+        "c-accent-ink": "#0b0d0f",
+        "c-focus": "#ffe066",
+        "c-success": "#c9f2d6"
+      }
+    }
+  },
   "layout": {
     "navigation": "prompt",
     "catalog": "listing",
