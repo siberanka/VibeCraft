@@ -55,7 +55,8 @@ Tema ayrıntıları: [Wiki → Görünüm ve Temalar](docs/wiki/Gorunum-ve-Temal
 
 - On hazır tema: Atlas, Forge, Volt, Nomad, Mono ve yeni Prism (sıvı cam), Arcade (retro piksel), Terminal
   (komut konsolu), Brick (cesur bloklar), Dusk (neon gün batımı). Tema renk düzenleyici, ana sayfa bölüm
-  sırası, üst/alt menü düzenleyici ve denetlenen özel CSS.
+  sırası, üst/alt menü düzenleyici ve denetlenen özel CSS. Her temaya özgü, yönetimden ayarlanan canlı imleç ve
+  dokunma efektleri.
 - Mağaza: kategoriler, kuponlar, kredi kodları, bonuslu kredi paketleri, başka oyuncuya hediye, hesap
   bakiyesinden otomatik yenilenen süreli rütbeler ve teslimat sandığı.
 - Her hareketin bir kez işlendiği cüzdan defteri; imzalı webhook'larla Stripe ve PayTR ödemeleri.
@@ -160,7 +161,8 @@ Theme details: [Wiki → Appearance and Themes](docs/wiki/Appearance-and-Themes.
 
 - Ten built-in themes: Atlas, Forge, Volt, Nomad, Mono and the new Prism (liquid glass), Arcade (retro
   pixel), Terminal (command console), Brick (bold blocks) and Dusk (neon sunset), with a theme editor,
-  home-section ordering, header/footer menu editor and checked custom CSS.
+  home-section ordering, header/footer menu editor and checked custom CSS. Each theme has its own live
+  mouse and tap effect, adjustable or switched off in the admin panel.
 - Store with categories, coupons, gift codes, credit packages with bonus credit, gifts to other players,
   timed ranks with automatic renewal from the account balance and a delivery chest.
 - Wallet ledger with idempotent postings; Stripe and PayTR payments with signed webhooks.

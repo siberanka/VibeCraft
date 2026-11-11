@@ -27,6 +27,9 @@ class AdminAppearanceController extends Controller
             'rows' => $this->layout->rows($theme),
             'navHidden' => $this->layout->hiddenNavigation(),
             'art' => $this->themes->art($theme),
+            'pointer' => $this->themes->pointer($theme),
+            'pointerEffects' => ThemeManager::POINTER_EFFECTS,
+            'pointerStrengths' => ThemeManager::POINTER_STRENGTHS,
         ]);
     }
 
@@ -41,6 +44,9 @@ class AdminAppearanceController extends Controller
             'nav_hidden.*' => ['string', Rule::in(HomeLayout::NAV_KEYS)],
             'art_mode' => ['nullable', Rule::in(['default', 'own', 'none'])],
             'art_media_id' => ['nullable', 'integer', 'exists:media,id', 'required_if:art_mode,own'],
+            'pointer_effect' => ['nullable', Rule::in(['default', 'off', ...ThemeManager::POINTER_EFFECTS])],
+            'pointer_strength' => ['nullable', Rule::in(ThemeManager::POINTER_STRENGTHS)],
+            'pointer_touch' => ['nullable', 'boolean'],
         ]);
 
         $defaults = $this->layout->defaults($data['theme']);
@@ -60,6 +66,13 @@ class AdminAppearanceController extends Controller
                 'none' => 'none',
                 default => null,
             };
+        }
+        if (isset($data['pointer_effect'])) {
+            $values["appearance.pointer.{$data['theme']}"] = [
+                'effect' => $data['pointer_effect'],
+                'strength' => $data['pointer_strength'] ?? 'normal',
+                'touch' => (bool) ($data['pointer_touch'] ?? false),
+            ];
         }
         $this->settings->setMany($values);
         $audit->log('appearance.layout_updated', null, ['theme' => $data['theme']], $request->user()->id);

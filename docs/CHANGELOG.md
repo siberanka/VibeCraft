@@ -13,6 +13,12 @@
 - Yeni tema görselleri koddan üretilen özgün piksel sanat ve düz renkli çizimlerdir
   (`tools/themes/build_artwork.py`); üçüncü taraf görsel içermez. Yeni yazı tipleri
   (Pixelify Sans, VT323, Archivo Black, Righteous) SIL OFL 1.1 ile yerel sunulur.
+- Her temaya kendine özgü canlı imleç ve dokunma efekti eklendi (dalgalar, korlar, şimşek,
+  ayak izleri, halka, prizma ışığı, pikseller ve paralar, karakterler, oyuncak bloklar, neon
+  şerit). Bağlantı ve düğmelerde parlar, form alanlarında ve metin seçerken durur, sistem
+  imlecini değiştirmez, "hareketi azalt" tercihinde ve yönetim panelinde kapalıdır.
+  Görünüm → Tema ayarları'ndan tema başına efekt, yoğunluk ve dokunma efekti seçilir;
+  aynı sayfadaki önizleme alanında kaydetmeden denenebilir.
 - Yönetim menüsü altı alana ayrıldı (Genel bakış, Mağaza, İçerik, Topluluk, Görünüm,
   Sistem); seçili alanın sayfaları ikinci satırda görünür ve rolün açamadığı alanlar
   gizlenir.

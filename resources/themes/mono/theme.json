@@ -3,6 +3,7 @@
   "name": "Mono",
   "version": "1.0.0",
   "description": "Minimal creator",
+  "pointer": "ring",
   "author": "siberanka",
   "scheme": "light",
   "tokens": {

@@ -3,6 +3,7 @@
   "name": "Nomad",
   "version": "1.0.0",
   "description": "Adventure & RPG",
+  "pointer": "footprints",
   "author": "siberanka",
   "tokens": {
     "c-bg": "#172128",

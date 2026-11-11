@@ -3,6 +3,7 @@
   "name": "Volt",
   "version": "1.0.0",
   "description": "Competitive arena",
+  "pointer": "bolt",
   "author": "siberanka",
   "tokens": {
     "c-bg": "#0b1016",

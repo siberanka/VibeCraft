@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="{{ $themeId ?? 'atlas' }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="{{ $themeId ?? 'atlas' }}"@if(!empty($themePointer['effect']) && ! request()->is('admin', 'admin/*', 'install', 'install/*')) data-pointer="{{ $themePointer['effect'] }}" data-pointer-strength="{{ $themePointer['strength'] }}"@if($themePointer['touch']) data-pointer-touch @endif @endif>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

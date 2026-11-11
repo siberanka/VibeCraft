@@ -3,6 +3,7 @@
   "name": "Forge",
   "version": "1.0.0",
   "description": "Survival & economy",
+  "pointer": "embers",
   "author": "siberanka",
   "tokens": {
     "c-bg": "#29231d",

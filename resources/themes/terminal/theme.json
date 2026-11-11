@@ -3,6 +3,7 @@
   "name": "Terminal",
   "version": "1.0.0",
   "description": "Command console",
+  "pointer": "glyphs",
   "author": "siberanka",
   "scheme": "dark",
   "stylesheet": "late",

@@ -24,6 +24,25 @@
 </div>
 @include('theme::partials.media-picker', ['pickerName' => 'art_media_id', 'pickerId' => 'art-media', 'pickerLabel' => __('My own image'), 'pickerValue' => old('art_media_id', $art['media']), 'pickerHint' => __('Used when "My own image" is selected. A wide picture of at least 1600 pixels works best.')])
 </fieldset>
+<fieldset class="pointer-choice"><legend>{{ __('Pointer effects') }}</legend>
+<p class="hint">{{ __('A small live effect follows the mouse and answers clicks; on phones and tablets it answers taps. It pauses over form fields and while text is selected, keeps the normal mouse cursor, and is off for visitors who ask their device for reduced motion. The admin panel never shows it.') }}</p>
+<div class="form-inline">
+    <div class="field"><label for="pointer-effect">{{ __('Effect') }}</label>
+        <select id="pointer-effect" name="pointer_effect">
+            <option value="default" @selected(old('pointer_effect', $pointer['choice']) === 'default')>{{ __('Theme effect: :name', ['name' => __('pointer.'.$pointer['default'])]) }}</option>
+            @foreach($pointerEffects as $pointerEffect)<option value="{{ $pointerEffect }}" @selected(old('pointer_effect', $pointer['choice']) === $pointerEffect)>{{ __('pointer.'.$pointerEffect) }}</option>@endforeach
+            <option value="off" @selected(old('pointer_effect', $pointer['choice']) === 'off')>{{ __('Off') }}</option>
+        </select>
+    </div>
+    <div class="field"><label for="pointer-strength">{{ __('Strength') }}</label>
+        <select id="pointer-strength" name="pointer_strength">
+            @foreach($pointerStrengths as $pointerStrength)<option value="{{ $pointerStrength }}" @selected(old('pointer_strength', $pointer['strength']) === $pointerStrength)>{{ __('pointer.strength.'.$pointerStrength) }}</option>@endforeach
+        </select>
+    </div>
+    <label class="checkbox" for="pointer-touch"><input type="hidden" name="pointer_touch" value="0"><input id="pointer-touch" type="checkbox" name="pointer_touch" value="1" @checked(old('pointer_touch', $pointer['touch']))><span>{{ __('Tap effects on phones and tablets') }}</span></label>
+</div>
+<div class="pointer-preview" data-pointer-preview data-pointer-default="{{ $pointer['default'] }}"><p>{{ __('Move the mouse here, click, or tap to try the effect. Changes show at once; save to use them on the site.') }}</p></div>
+</fieldset>
 <fieldset><legend>{{ __('Hide from the main menu') }}</legend>
 @foreach(\App\Core\Theme\HomeLayout::NAV_KEYS as $navKey)
 <label class="checkbox" for="nav-{{ $navKey }}"><input id="nav-{{ $navKey }}" name="nav_hidden[]" type="checkbox" value="{{ $navKey }}" @checked(in_array($navKey, $navHidden, true))><span>{{ __('navkey.'.$navKey) }}</span></label>

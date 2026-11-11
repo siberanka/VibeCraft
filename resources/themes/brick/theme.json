@@ -3,6 +3,7 @@
   "name": "Brick",
   "version": "1.0.0",
   "description": "Bold blocks",
+  "pointer": "blocks",
   "author": "siberanka",
   "scheme": "light",
   "stylesheet": "late",

@@ -3,6 +3,7 @@
   "name": "Atlas",
   "version": "1.0.0",
   "description": "Network command",
+  "pointer": "ripple",
   "author": "siberanka",
   "tokens": {
     "c-bg": "#10151a",

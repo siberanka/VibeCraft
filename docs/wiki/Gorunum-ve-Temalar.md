@@ -44,6 +44,43 @@ rakam yağmuru, yuvarlanan bloklar…). Süslemelerin tamamı ekran okuyucularda
 azalt" seçeneğini açan ziyaretçiler için kapalıdır. Kutlamayı kapatmak için **Özel CSS** bölümüne
 `.theme-egg { display: none; }` ekleyin.
 
+## İmleç efektleri
+
+Her temanın fareyi izleyen ve tıklamalara karşılık veren kendine özgü canlı bir efekti vardır. Telefon ve
+tabletlerde bunun yerine dokunmalara karşılık verir.
+
+| Tema | Efekt | Tıklayınca ya da dokununca |
+|---|---|---|
+| Atlas | Dalgalar: yoldan küçük ışık zerreleri yükselir | Su gibi halkalar yayılır |
+| Forge | Korlar yukarı süzülür | Örsten çıkar gibi kıvılcımlar saçılır |
+| Volt | Yol boyunca şimşek çakar | Her yöne şimşekler |
+| Nomad | Sağlı sollu ayak izleri | Bir avuç kum havalanır |
+| Mono | İmleci sessiz bir halka izler, bağlantıların üzerinde açılır | Küçük bir artı damgası |
+| Prism | Işık pembe, beyaz ve mavi olarak ayrışır | Cam kırıkları |
+| Arcade | Izgaraya oturan pikseller | Paralar zıplayıp düşer |
+| Terminal | Metin ızgarasında karakterler | Yanıp sönen blok imleç ve tarama çizgisi |
+| Brick | Yoldan oyuncak bloklar yuvarlanır | Bir avuç blok havaya fırlar |
+| Dusk | Pembeden camgöbeğine dönen neon şerit | Neon halka ve birkaç yıldız |
+
+Efekt farenin ne yaptığına göre davranır:
+
+- Bağlantı ve düğmelerin üzerinde parlaklaşır; kullanılamayan bir şeye tıklanınca küçük, soluk bir tepki verir.
+- Form alanlarının üzerinde, metin seçilirken, fare durduğunda ya da pencereden çıktığında durur.
+- Normal fare imleci hiç değiştirilmez; metin, bağlantı, bekleme ve "izin yok" imleçleri çalışmaya devam eder.
+- Dokunmatik ekranlarda yalnızca kısa ve hareketsiz dokunuşlar efekti tetikler; kaydırma ve uzun basma tetiklemez.
+- Cihazında "hareketi azalt" seçeneğini açan ziyaretçiler efekti hiç görmez; yönetim panelinde hiç çalışmaz.
+
+**Yönetim → Görünüm → Tema ayarları → İmleç efektleri** her tema için ayrı ayarlanır:
+
+| Ayar | Seçenekler |
+|---|---|
+| Efekt | Temanın kendi efekti, diğer dokuzundan biri ya da **Kapalı** |
+| Yoğunluk | Hafif, Normal ya da Canlı (iz sayısı ve patlamaların büyüklüğü) |
+| Telefon ve tabletlerde dokunma efekti | Açık ya da kapalı |
+
+Kaydetmeden önce aynı sayfadaki önizleme alanında seçiminizi deneyin. Efekt temanın renklerini kullanır;
+başka bir palet seçmek efekti de değiştirir.
+
 ## Tema renkleri
 
 **Yönetim → Görünüm → Tema renkleri** (ya da tema kartındaki **Renkler**) iki bölümden oluşur:

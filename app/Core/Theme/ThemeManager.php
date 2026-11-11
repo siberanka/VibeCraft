@@ -16,6 +16,11 @@ use InvalidArgumentException;
  */
 class ThemeManager
 {
+    /** Pointer effect recipes in public/assets/pointer-fx.js; each theme names its own default. */
+    public const POINTER_EFFECTS = ['ripple', 'embers', 'bolt', 'footprints', 'ring', 'prism', 'pixels', 'glyphs', 'blocks', 'neon'];
+
+    public const POINTER_STRENGTHS = ['subtle', 'normal', 'lively'];
+
     private ?string $active = null;
 
     /** @var array<string, array<string, mixed>> */
@@ -145,6 +150,35 @@ class ThemeManager
         }
 
         return ['mode' => 'default', 'media' => null];
+    }
+
+    /**
+     * Live pointer effect of a theme. "choice" is what the owner saved (default, off or an effect);
+     * "effect" is what the page runs, null when switched off.
+     *
+     * @return array{choice: string, effect: ?string, default: string, strength: string, touch: bool}
+     */
+    public function pointer(?string $id = null): array
+    {
+        $id ??= $this->active();
+        $default = (string) ($this->manifest($id)['pointer'] ?? '');
+        $default = in_array($default, self::POINTER_EFFECTS, true) ? $default : self::POINTER_EFFECTS[0];
+        $saved = (array) $this->settings->get("appearance.pointer.$id", []);
+        $choice = (string) ($saved['effect'] ?? 'default');
+        $choice = in_array($choice, ['default', 'off', ...self::POINTER_EFFECTS], true) ? $choice : 'default';
+        $strength = (string) ($saved['strength'] ?? 'normal');
+
+        return [
+            'choice' => $choice,
+            'effect' => match ($choice) {
+                'off' => null,
+                'default' => $default,
+                default => $choice,
+            },
+            'default' => $default,
+            'strength' => in_array($strength, self::POINTER_STRENGTHS, true) ? $strength : 'normal',
+            'touch' => (bool) ($saved['touch'] ?? true),
+        ];
     }
 
     public function cssVariables(?string $id = null): string

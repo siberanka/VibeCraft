@@ -47,6 +47,44 @@ blocks…) for a few seconds. Everything decorative is hidden from screen reader
 who ask their device for reduced motion. To turn the celebration off, add `.theme-egg { display: none; }` to
 **Custom CSS**.
 
+## Pointer effects
+
+Every theme has its own live effect that follows the mouse and answers clicks. On phones and tablets it
+answers taps instead.
+
+| Theme | Effect | When you click or tap |
+|---|---|---|
+| Atlas | Ripples: small motes rise from the path | Rings spread like water |
+| Forge | Embers drift upward | Sparks fly as from an anvil |
+| Volt | Lightning crackles along the path | Bolts in every direction |
+| Nomad | Footprints, left and right | A puff of sand |
+| Mono | A quiet ring trails the cursor and opens over links | A small cross is stamped |
+| Prism | Light splits into rose, white and sky | Glass shards |
+| Arcade | Pixels on a grid | Coins jump and fall |
+| Terminal | Characters on a text grid | A blinking block cursor and a scan line |
+| Brick | Toy blocks tumble off the path | A handful of blocks flies up |
+| Dusk | A neon ribbon fading from pink to cyan | A neon ring and a few stars |
+
+The effect reacts to what the mouse is doing:
+
+- Over links and buttons it becomes brighter; clicking something that cannot be used gives a small muted
+  response instead.
+- It pauses over form fields, while text is being selected, and when the mouse rests or leaves the window.
+- The normal mouse cursor is never replaced, so the text, link, waiting and "not allowed" cursors keep working.
+- On touch screens only short, still taps trigger it; scrolling and long presses do not.
+- Visitors whose device asks for reduced motion never see it, and it never runs in the admin panel.
+
+**Admin → Appearance → Theme settings → Pointer effects** sets it for each theme:
+
+| Setting | Choices |
+|---|---|
+| Effect | The theme's own effect, any of the other nine, or **Off** |
+| Strength | Subtle, Normal or Lively (how many marks and how big the bursts are) |
+| Tap effects on phones and tablets | On or off |
+
+Try your choice in the preview area on the same page before saving. The effect uses the theme's colours, so a
+different palette changes it too.
+
 ## Theme colours
 
 **Admin → Appearance → Theme colours** (or **Colours** on a theme card) has two parts:

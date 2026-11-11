@@ -3,6 +3,7 @@
   "name": "Dusk",
   "version": "1.0.0",
   "description": "Neon sunset",
+  "pointer": "neon",
   "author": "siberanka",
   "scheme": "dark",
   "stylesheet": "late",

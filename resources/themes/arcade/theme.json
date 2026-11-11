@@ -3,6 +3,7 @@
   "name": "Arcade",
   "version": "1.0.0",
   "description": "Retro pixel",
+  "pointer": "pixels",
   "author": "siberanka",
   "scheme": "dark",
   "stylesheet": "late",

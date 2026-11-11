@@ -775,5 +775,18 @@
     "PHP extensions": "PHP extensions",
     "Writable .env file": "Writable .env file",
     "Could not connect to the database. Check the host, name, user and password.": "Could not connect to the database. Check the host, name, user and password.",
-    "The database tables could not be created. Use an empty database and check the user permissions.": "The database tables could not be created. Use an empty database and check the user permissions."
+    "The database tables could not be created. Use an empty database and check the user permissions.": "The database tables could not be created. Use an empty database and check the user permissions.",
+    "pointer.ripple": "Ripples",
+    "pointer.embers": "Embers",
+    "pointer.bolt": "Lightning",
+    "pointer.footprints": "Footprints",
+    "pointer.ring": "Ring",
+    "pointer.prism": "Prism light",
+    "pointer.pixels": "Pixels and coins",
+    "pointer.glyphs": "Glyphs",
+    "pointer.blocks": "Toy blocks",
+    "pointer.neon": "Neon ribbon",
+    "pointer.strength.subtle": "Subtle",
+    "pointer.strength.normal": "Normal",
+    "pointer.strength.lively": "Lively"
 }

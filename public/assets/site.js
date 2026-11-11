@@ -199,3 +199,23 @@ siteMark?.addEventListener('click', event => {
         celebrate();
     }
 });
+
+// Live pointer effects: the public page runs the theme's effect; the admin preview pad runs the one being edited.
+const pointerRoot = document.documentElement;
+const pointerPreview = document.querySelector('[data-pointer-preview]');
+if ((pointerRoot.dataset.pointer || pointerPreview) && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    import('./pointer-fx.js').then(({ start }) => {
+        if (pointerRoot.dataset.pointer) {
+            start({ effect: pointerRoot.dataset.pointer, strength: pointerRoot.dataset.pointerStrength, touch: 'pointerTouch' in pointerRoot.dataset });
+            return;
+        }
+        const form = pointerPreview.closest('form');
+        const chosen = () => {
+            const value = form?.querySelector('[name="pointer_effect"]')?.value ?? 'default';
+            return value === 'default' ? pointerPreview.dataset.pointerDefault : value;
+        };
+        const strength = () => form?.querySelector('[name="pointer_strength"]')?.value ?? 'normal';
+        const effects = start({ effect: chosen(), strength: strength(), touch: true, scope: pointerPreview });
+        form?.addEventListener('change', () => effects.set(chosen(), strength()));
+    }).catch(() => {});
+}

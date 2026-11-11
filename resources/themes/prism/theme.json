@@ -3,6 +3,7 @@
   "name": "Prism",
   "version": "1.0.0",
   "description": "Liquid glass",
+  "pointer": "prism",
   "author": "siberanka",
   "scheme": "dark",
   "stylesheet": "late",

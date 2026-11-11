@@ -90,6 +90,7 @@ class SiteComposer
             'navPages' => $navPages,
             'themeId' => $this->themes->active(),
             'themeArt' => $this->themes->art(),
+            'themePointer' => $this->themes->pointer(),
             'themeScheme' => $this->themes->scheme(),
             'themeLate' => $this->themes->loadsStylesheetLast(),
             'homeSections' => $this->layout->visible($this->themes->active()),
